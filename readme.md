@@ -1,12 +1,12 @@
 # NITK RACING WEBSITE
 
-##instructions
+## instructions
 * install latest version of django
 * install latest version of python 3
 * install pycharm professional (get student licence)
 * clone repo
 
-##to start server
+## to start server
 1. open pycharm and file>open>[filepath]/nitk_racing
 2. at the bottom there is terminal option type the following
     * python3 manage.py runserver
