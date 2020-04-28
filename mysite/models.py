@@ -17,8 +17,8 @@ class Sponsor(models.Model):
 
 
 class Member(models.Model):
-    member_name = models.CharField(max_length= 150)
-    post = models.CharField(max_length=100)
+    member_name = models.CharField(max_length=50)
+    post = models.CharField(max_length=300)
     insta = models.URLField(default="")
     linkdin = models.URLField(default="")
     member_img = models.ImageField(upload_to='images/members')
