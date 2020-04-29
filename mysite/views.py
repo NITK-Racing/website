@@ -29,7 +29,7 @@ def about(request):
                'sig_head_list': sig_head_list,
                'image_gallery_full': image_gallery_full,
                'image_gallery_short': image_gallery_short,
-               'full_member_list': full_member_list,
+               'members_list': full_member_list,
                }
     return render(request, 'about.html', context=context)
 
