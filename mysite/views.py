@@ -29,9 +29,9 @@ def about(request):
                'sig_head_list': sig_head_list,
                'image_gallery_full': image_gallery_full,
                'image_gallery_short': image_gallery_short,
-               'full_member_list' : full_member_list,
+               'full_member_list': full_member_list,
                }
-    return render(request, 'about-us.html', context=context)
+    return render(request, 'about.html', context=context)
 
 
 def contact(request):
@@ -66,3 +66,25 @@ def team(request):
                'full_member_list': full_member_list
                }
     return render(request, 'team.html', context=context)
+
+
+def aerodynamics(request):
+    full_member_list = Member.objects.all()
+    context = {'full_member_list': full_member_list}
+    return render(request, 'aerodynamics.html', context=context)
+
+def vehicledynamics(request):
+    full_member_list = Member.objects.all()
+    context = {'full_member_list': full_member_list}
+    return render(request, 'vehicledynamics.html', context=context)
+
+
+def powertrain(request):
+    full_member_list = Member.objects.all()
+    context = {'full_member_list': full_member_list}
+    return render(request, 'powertrain.html', context=context)
+
+def electronics(request):
+    full_member_list = Member.objects.all()
+    context = {'full_member_list': full_member_list}
+    return render(request, 'electronics.html', context=context)

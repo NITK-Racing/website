@@ -7,11 +7,15 @@ from . import views
 app_name = 'mysite'
 urlpatterns = [
     path('', views.index, name='index'),
-    path('contact/', views.general ,name='contact'),
-    path('team/', views.general ,name='about'),
-    path('about/', views.general, name='about'),
+    path('contact/', views.contact, name='contact'),
+    path('team/', views.team, name='team'),
+    path('about/', views.about, name='about'),
+    path('aerodynamics/', views.aerodynamics, name='aerodynamics'),
+    path('vehicledynamics/', views.vehicledynamics, name='vehicledynamics'),
+    path('electronics/', views.electronics, name='electronics'),
+    path('powertrain/', views.powertrain, name='powertrain')
 
 ]
 if settings.DEBUG:
-        urlpatterns += static(settings.MEDIA_URL,
-                              document_root=settings.MEDIA_ROOT)
+    urlpatterns += static(settings.MEDIA_URL,
+                          document_root=settings.MEDIA_ROOT)
