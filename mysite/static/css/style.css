@@ -324,12 +324,12 @@ ol {
 -----------------------*/
 
 .header-section {
+	background-color: #0a0a0a;
 	position: absolute;
 	left: 0;
 	top: 0;
 	width: 100%;
-	padding: 0 15px;
-	padding-top: 55px;
+	padding: 25px;
 	z-index: 99;
 }
 
@@ -882,6 +882,7 @@ ol {
 .gallery-section {
 	background: #151515;
 	overflow: hidden;
+
 }
 
 .gallery-section.gallery-page {
@@ -893,6 +894,7 @@ ol {
 }
 
 .gallery {
+
 	margin-right: -10px;
 }
 
