@@ -13,8 +13,8 @@ urlpatterns = [
     path('aerodynamics/', views.aerodynamics, name='aerodynamics'),
     path('vehicledynamics/', views.vehicledynamics, name='vehicledynamics'),
     path('electronics/', views.electronics, name='electronics'),
-    path('powertrain/', views.powertrain, name='powertrain')
-
+    path('powertrain/', views.powertrain, name='powertrain'),
+    path('gallery', views.gallery, name='gallery')
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL,

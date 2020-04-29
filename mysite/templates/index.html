@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="zxx">
+<style>
+    p2{
+        padding-top:30px;
+    }
 
+</style>
 <head>
     <meta charset="UTF-8">
     <meta name="description" content="NITK RACING">
@@ -98,7 +103,8 @@
     <section class="hero-section">
         <div class="hs-slider owl-carousel">
             {% for banner in banners_list %}
-                <div class="hs-item set-bg" data-setbg="{{banner.bg_img.url}}">
+                {% if banner.page_to_display == 1 %}
+               <div class="hs-item set-bg"  data-setbg="{{banner.bg_img.url}}">
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-6 offset-lg-6">
@@ -109,8 +115,9 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> {% endif %}
             {% endfor %}
+
         </div>
     </section>
     <!-- Hero Section End -->
@@ -129,24 +136,24 @@
             <div class="row">
                 <div class="col-lg-3 col-sm-6">
                     <div class="cs-item">
-                       <a href="./aerodynamics"> <span class="flaticon-034-stationary-bike"></span></a>
+                       <a href="../aerodynamics"> <span class="flaticon-034-stationary-bike"></span></a>
                         <h4>AERODYNAMICS</h4>
                     </div>
                 </div>
                 <div class="col-lg-3 col-sm-6">
                     <div class="cs-item">
-                        <a href="./vehicle-dynamics"><span class="flaticon-034-stationary-bike"></span></a>
+                        <a href="../vehicledynamics"><span class="flaticon-034-stationary-bike"></span></a>
                         <h4>VEHICLE DYNAMICS</h4>
                     </div>
                 </div>
                 <div class="col-lg-3 col-sm-6">
-                    <div class="cs-item"><a href="./powertrain">
+                    <div class="cs-item"><a href="../powertrain">
                         <span class="flaticon-034-stationary-bike"></span></a>
                         <h4>POWERTRAIN</h4>
                     </div>
                 </div>
                 <div class="col-lg-3 col-sm-6">
-                    <div class="cs-item"><a href="./electronics">
+                    <div class="cs-item"><a href="../electronics">
                         <span class="flaticon-034-stationary-bike"></span></a>
                         <h4>ELECTRONICS</h4>
                     </div>
