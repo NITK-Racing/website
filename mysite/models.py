@@ -39,6 +39,7 @@ class Image(models.Model):
 class Blog(models.Model):
     title = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=200, unique=True)
+    blog_filter= models.IntegerField(default=0)
     author = models.ForeignKey(Member, on_delete= models.CASCADE,related_name='blog_posts')
     updated_on = models.DateTimeField(auto_now= True)
     content = models.TextField()
