@@ -48,10 +48,10 @@
         </nav>
         <div id="mobile-menu-wrap"></div>
         <div class="canvas-social">
-            <a href="#"><i class="fa fa-facebook"></i></a>
-            <a href="#"><i class="fa fa-twitter"></i></a>
+             <a href="https://www.facebook.com/nitkracing"><i class="fa fa-facebook"></i></a>
+            <a href="https://twitter.com/nitkracing"><i class="fa fa-twitter"></i></a>
             <a href="#"><i class="fa fa-youtube-play"></i></a>
-            <a href="#"><i class="fa fa-instagram"></i></a>
+            <a href="https://www.instagram.com/nitkracing/"><i class="fa fa-instagram"></i></a>
         </div>
     </div>
     <header class="header-section">
@@ -67,10 +67,10 @@
                 <div class="col-lg-6">
                     <nav class="nav-menu">
                         <ul>
-                            <li><a href="./index.html">Home</a></li>
-                            <li><a href="about.html">About Us</a></li>
-                            <li class="active"><a href="./team.html">Our Team</a></li>
-                            <li><a href="./contact.html">Contact</a></li>
+                            <li><a href="../#">Home</a></li>
+                            <li><a href="../about">About Us</a></li>
+                            <li class="active"><a href="../team">Our Team</a></li>
+                            <li><a href="../contact">Contact</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -80,10 +80,10 @@
                             <i class="fa fa-search"></i>
                         </div>
                         <div class="to-social">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-youtube-play"></i></a>
-                            <a href="#"><i class="fa fa-instagram"></i></a>
+                             <a href="https://www.facebook.com/nitkracing"><i class="fa fa-facebook"></i></a>
+            <a href="https://twitter.com/nitkracing"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-youtube-play"></i></a>
+            <a href="https://www.instagram.com/nitkracing/"><i class="fa fa-instagram"></i></a>
                         </div>
                     </div>
                 </div>
@@ -94,7 +94,26 @@
         </div>
     </header>
     <!-- Header End -->
+<section class="hero-section">
+        <div class="hs-slider owl-carousel">
+            {% for banner in banners_list %}
+                {% if banner.page_to_display == 1 %}
+               <div class="hs-item set-bg"  data-setbg="{{banner.bg_img.url}}">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-6 offset-lg-6">
+                                <div class="hi-text">
+                                    <span>{{ banner.small_text }}</span>
+                                    <h1>{{ banner.large_text }}</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> {% endif %}
+            {% endfor %}
 
+        </div>
+    </section>
     <!-- Breadcrumb Section Begin -->
     <section class="breadcrumb-section set-bg" data-setbg="img/breadcrumb-bg.jpg">
         <div class="container">
