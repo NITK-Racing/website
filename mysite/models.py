@@ -48,14 +48,10 @@ class Image(models.Model):
 class Blog(models.Model):
     title = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=200, unique=True)
-<<<<<<< HEAD
     blog_filter= models.IntegerField(default=0)
     author = models.ForeignKey(Member, on_delete= models.CASCADE,related_name='blog_posts')
     updated_on = models.DateTimeField(auto_now= True)
-=======
-    author = models.ForeignKey(Member, on_delete=models.CASCADE, related_name='blog_posts')
-    updated_on = models.DateTimeField(auto_now=True)
->>>>>>> c87075319663f6e1dab9c706a2f83af14836e58c
+
     content = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
 

@@ -7,6 +7,7 @@ from . import views
 app_name = 'mysite'
 urlpatterns = [
     path('', views.index, name='index'),
+    path('index', views.index, name='index1'),
     path('contact/', views.contact, name='contact'),
     path('team/', views.team, name='team'),
     path('about/', views.about, name='about'),
