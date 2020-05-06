@@ -60,3 +60,9 @@ class Blog(models.Model):
 
     def __str__(self):
         return self.title
+
+class Document(models.Model):
+    description = models.CharField(max_length=255, blank=True)
+    document = models.FileField(upload_to='3dModels/')
+    subsystem_filter = models.IntegerField(default=0)
+    uploaded_at = models.DateTimeField(auto_now_add=True)
