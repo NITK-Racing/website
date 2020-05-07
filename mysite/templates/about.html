@@ -88,7 +88,7 @@
    <section class="hero-section">
         <div class="hs-slider owl-carousel">
             {% for banner in banners_list %}
-                {% if banner.page_to_display == 1 %}
+                {% if banner.page_to_display == 2 %}
                <div class="hs-item set-bg"  data-setbg="{{banner.bg_img.url}}">
                     <div class="container">
                         <div class="row">
@@ -167,8 +167,6 @@
                         </div>
                           {% endif %}
                        {% endfor %}
-
-
                 </div>
             </div>
         </div>
