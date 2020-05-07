@@ -66,3 +66,5 @@ class Document(models.Model):
     document = models.FileField(upload_to='3dModels/')
     subsystem_filter = models.IntegerField(default=0)
     uploaded_at = models.DateTimeField(auto_now_add=True)
+    def __str__(self):
+        return self.description

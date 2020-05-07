@@ -84,7 +84,7 @@ def vehicledynamics(request):
     full_member_list = Member.objects.all()
     blog_list = Blog.objects.all()
     banners_list = Banner.objects.all()
-    document_list = Document.document.all()
+    document_list = Document.objects.all()
     context = {'full_member_list': full_member_list,
                'banners_list': banners_list,
                'blog_list': blog_list,
@@ -97,7 +97,7 @@ def powertrain(request):
     full_member_list = Member.objects.all()
     blog_list = Blog.objects.all()
     banners_list = Banner.objects.all()
-    document_list = Document.document.all()
+    document_list = Document.objects.all()
     context = {'full_member_list': full_member_list,
                'banners_list': banners_list,
                'blog_list': blog_list,
@@ -110,7 +110,7 @@ def electronics(request):
     full_member_list = Member.objects.all()
     blog_list = Blog.objects.all()
     banners_list = Banner.objects.all()
-    document_list = Document.document.all()
+    document_list = Document.objects.all()
     context = {'full_member_list': full_member_list,
                'banners_list': banners_list,
                'blog_list': blog_list,
