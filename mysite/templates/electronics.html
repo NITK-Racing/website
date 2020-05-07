@@ -103,7 +103,6 @@
     <section class="hero-section">
         <div class="hs-slider owl-carousel">
             {% for banner in banners_list %}
-                {% if banner.page_to_display == 8 %}
                <div class="hs-item set-bg"  data-setbg="{{banner.bg_img.url}}">
                     <div class="container">
                         <div class="row">
@@ -115,7 +114,7 @@
                             </div>
                         </div>
                     </div>
-                </div> {% endif %}
+                </div>
             {% endfor %}
 
         </div>
@@ -136,25 +135,25 @@
                    <div class="row">
                 <div class="col-lg-3 col-sm-6">
                     <div class="cs-item">
-                        <a href="../aerodynamics"> <img src="{%static 'img/AD_w.png' %}" alt=""> </a>
+                        <a href="../aerodynamics"> <img src="{%static 'img/AD_w.png' %}" alt="" height="350" width="300"> </a>
                         <h4>AERODYNAMICS</h4>
                     </div>
                 </div>
                 <div class="col-lg-3 col-sm-6">
                     <div class="cs-item">
-                        <a href="../vehicledynamics"><img src="{%static 'img/VD_w.png' %}" alt=""></a>
+                        <a href="../vehicledynamics"><img src="{%static 'img/VD_w.png' %}" alt="" height="350" width="300"></a>
                         <h4>VEHICLE DYNAMICS</h4>
                     </div>
                 </div>
                 <div class="col-lg-3 col-sm-6">
                     <div class="cs-item"><a href="../powertrain">
-                        <img src="{%static 'img/PT_w.png' %}" alt=""></a>
+                        <img src="{%static 'img/PT_w.png' %}" alt="" height="350" width="300"></a>
                         <h4>POWERTRAIN</h4>
                     </div>
                 </div>
                 <div class="col-lg-3 col-sm-6">
                     <div class="cs-item"><a href="../electronics">
-                       <img src="{%static 'img/EL_w.png' %}" alt=""></a>
+                       <img src="{%static 'img/EL_w.png' %}" alt="" height="350" width="300"></a>
                         <h4>ELECTRONICS</h4>
                     </div>
                 </div>
@@ -168,7 +167,7 @@
                 <div class="col-lg-8 p-0">
                     <div class="blog-item">
                       {% for blog in blog_list %}
-                          {% if blog.blog_filter == 4 %}
+
                         <div class="bi-text">
                             <h5>{{ blog.title }}</h5>
                             <ul>
@@ -177,7 +176,6 @@
                             </ul>
                             <p>{{ blog.content }}</p>
                         </div>
-                          {% endif %}
                        {% endfor %}
                     </div>
 
@@ -207,7 +205,7 @@
             <div class="row">
 <div class="ts-slider owl-carousel">
                     {% for member in full_member_list %}
-                        {% if member.sig == 4 %}
+
                         <div class="col-lg-4">
                         <div class="ts-item set-bg" data-setbg="{{ member.member_img.url }}">
                             <div class="ts_text">
@@ -216,13 +214,27 @@
                             </div>
                         </div>
                     </div>
-                        {% endif %}
                     {% endfor %}
                 </div>
                 </div>
             </div>
         </div>
     </section>
+    <section class="choseus-section spad">
+        <div class="container">
+            <div class="row">
+
+                <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.js"></script>
+<script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+                {% for document in document_list %}
+<model-viewer src="{{ document.document.url }}" alt="A 3D model " auto-rotate camera-controls>
+
+</model-viewer>
+{% endfor %}
+            </div>
+        </div>
+    </section>
+
 
     <!-- Team Section End -->
 

@@ -105,9 +105,7 @@
         </div>
     </header>
     <!-- Header End -->
-
-    <!-- Hero Section Begin -->
-    <section class="hero-section">
+ <section class="hero-section">
         <div class="hs-slider owl-carousel">
             {% for banner in banners_list %}
                 {% if banner.page_to_display == 1 %}
@@ -127,7 +125,6 @@
 
         </div>
     </section>
-    <!-- Hero Section End -->
 
     <!-- ChoseUs Section Begin -->
     <section class="choseus-section spad">
@@ -143,25 +140,27 @@
             <div class="row">
                 <div class="col-lg-3 col-sm-6">
                     <div class="cs-item">
-                        <a href="../aerodynamics"> <img src="{%static 'img/AD_w.png' %}" alt=""> </a>
+                        <a href="../aerodynamics">
+                            <img src="{%static 'img/AD_w.png' %}" alt="" height="350" width="300"> </a>
                         <h4>AERODYNAMICS</h4>
                     </div>
                 </div>
                 <div class="col-lg-3 col-sm-6">
                     <div class="cs-item">
-                        <a href="../vehicledynamics"><img src="{%static 'img/VD_w.png' %}" alt=""></a>
+                        <a href="../vehicledynamics">
+                            <img src="{%static 'img/VD_w.png' %}" alt="" height="350" width="300"></a>
                         <h4>VEHICLE DYNAMICS</h4>
                     </div>
                 </div>
                 <div class="col-lg-3 col-sm-6">
                     <div class="cs-item"><a href="../powertrain">
-                        <img src="{%static 'img/PT_w.png' %}" alt=""></a>
+                        <img src="{%static 'img/PT_w.png' %}" alt="" height="350" width="300"></a>
                         <h4>POWERTRAIN</h4>
                     </div>
                 </div>
                 <div class="col-lg-3 col-sm-6">
                     <div class="cs-item"><a href="../electronics">
-                       <img src="{%static 'img/EL_w.png' %}" alt=""></a>
+                       <img src="{%static 'img/EL_w.png' %}" alt="" height="350" width="300"></a>
                         <h4>ELECTRONICS</h4>
                     </div>
                 </div>

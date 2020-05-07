@@ -51,7 +51,6 @@ class Blog(models.Model):
     blog_filter= models.IntegerField(default=0)
     author = models.ForeignKey(Member, on_delete= models.CASCADE,related_name='blog_posts')
     updated_on = models.DateTimeField(auto_now= True)
-
     content = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
 
