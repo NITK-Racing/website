@@ -4,7 +4,14 @@
     p2{
         padding-top:30px;
     }
-
+.customization_text img {
+    background: darkred;
+    padding: 30px;
+    border-radius: 50%;
+    display:block;
+    width:50px;
+    height:50px;
+}
 </style>
 <head>
     <meta charset="UTF-8">
@@ -44,16 +51,16 @@
         <nav class="canvas-menu mobile-menu">
             <ul>
                 <li><a href="">Home</a></li>
-                <li><a href="./about">About Us</a></li>
-                <li><a href="./team">Our Team</a></li>
-                <li><a href="./contact">Contact</a></li>
+                <li><a href="../about">About Us</a></li>
+                <li><a href="../team">Our Team</a></li>
+                <li><a href="../contact">Contact</a></li>
             </ul>
         </nav>
         <div id="mobile-menu-wrap"></div>
         <div class="canvas-social">
             <a href="https://www.facebook.com/nitkracing"><i class="fa fa-facebook"></i></a>
             <a href="https://twitter.com/nitkracing"><i class="fa fa-twitter"></i></a>
-            <a href="#"><i class="fa fa-youtube-play"></i></a>
+            <a href="https://www.youtube.com/channel/UCboCcz11TdW0tMa_5n-eiyA"><i class="fa fa-youtube-play"></i></a>
             <a href="https://www.instagram.com/nitkracing/"><i class="fa fa-instagram"></i></a>
         </div>
     </div>
@@ -71,9 +78,10 @@
                     <nav class="nav-menu">
                         <ul>
                             <li class="./active"><a href="">Home</a></li>
-                            <li><a href="./about">About Us</a></li>
-                            <li><a href="./team">Our Team</a></li>
-                            <li><a href="./contact">Contact</a></li>
+                            <li><a href="../about">About Us</a></li>
+                            <li><a href="../team">Our Team</a></li>
+                            <li><a href="../contact">Contact</a></li>
+
                         </ul>
                     </nav>
                 </div>
@@ -85,7 +93,7 @@
                         <div class="to-social">
             <a href="https://www.facebook.com/nitkracing"><i class="fa fa-facebook"></i></a>
             <a href="https://twitter.com/nitkracing"><i class="fa fa-twitter"></i></a>
-            <a href="#"><i class="fa fa-youtube-play"></i></a>
+            <a href="https://www.youtube.com/channel/UCboCcz11TdW0tMa_5n-eiyA"><i class="fa fa-youtube-play"></i></a>
             <a href="https://www.instagram.com/nitkracing/"><i class="fa fa-instagram"></i></a>
                         </div>
                     </div>
@@ -135,28 +143,29 @@
             <div class="row">
                 <div class="col-lg-3 col-sm-6">
                     <div class="cs-item">
-                       <a href="../aerodynamics"> <span class="flaticon-034-stationary-bike"></span></a>
+                        <a href="../aerodynamics"> <img src="{%static 'img/AD_w.png' %}" alt=""> </a>
                         <h4>AERODYNAMICS</h4>
                     </div>
                 </div>
                 <div class="col-lg-3 col-sm-6">
                     <div class="cs-item">
-                        <a href="../vehicledynamics"><span class="flaticon-034-stationary-bike"></span></a>
+                        <a href="../vehicledynamics"><img src="{%static 'img/VD_w.png' %}" alt=""></a>
                         <h4>VEHICLE DYNAMICS</h4>
                     </div>
                 </div>
                 <div class="col-lg-3 col-sm-6">
                     <div class="cs-item"><a href="../powertrain">
-                        <span class="flaticon-034-stationary-bike"></span></a>
+                        <img src="{%static 'img/PT_w.png' %}" alt=""></a>
                         <h4>POWERTRAIN</h4>
                     </div>
                 </div>
                 <div class="col-lg-3 col-sm-6">
                     <div class="cs-item"><a href="../electronics">
-                        <span class="flaticon-034-stationary-bike"></span></a>
+                       <img src="{%static 'img/EL_w.png' %}" alt=""></a>
                         <h4>ELECTRONICS</h4>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
@@ -194,16 +203,7 @@
         </div>
     </section>
 
-    <div class="gallery-section">
-        <div class="gallery">
-            <div class="grid-sizer"></div>
-            {% for image in image_gallery_short %}
-                            <div class="gs-item grid-wide set-bg" data-setbg="{{ image.img.url }}">
-                <a href="{{ image.img.url }}" class="thumb-icon image-popup"><i class="fa fa-picture-o"></i></a>
-            </div>
-            {% endfor %}
-        </div>
-    </div>
+
     <!-- Gallery Section End -->
 
     <!-- Team Section Begin -->

@@ -44,17 +44,17 @@
         </div>
         <nav class="canvas-menu mobile-menu">
             <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="./about">About Us</a></li>
-                <li><a href="./team">Our Team</a></li>
-                <li><a href="./contact">Contact</a></li>
+                <li><a href="../index">Home</a></li>
+                <li><a href="../about">About Us</a></li>
+                <li><a href="../team">Our Team</a></li>
+                <li><a href="../contact">Contact</a></li>
             </ul>
         </nav>
         <div id="mobile-menu-wrap"></div>
         <div class="canvas-social">
             <a href="https://www.facebook.com/nitkracing"><i class="fa fa-facebook"></i></a>
             <a href="https://twitter.com/nitkracing"><i class="fa fa-twitter"></i></a>
-            <a href="#"><i class="fa fa-youtube-play"></i></a>
+            <a href="https://www.youtube.com/channel/UCboCcz11TdW0tMa_5n-eiyA"><i class="fa fa-youtube-play"></i></a>
             <a href="https://www.instagram.com/nitkracing/"><i class="fa fa-instagram"></i></a>
         </div>
     </div>
@@ -71,10 +71,10 @@
                 <div class="col-lg-6">
                     <nav class="nav-menu">
                         <ul>
-                            <li class="./active"><a href="">Home</a></li>
-                            <li><a href="./about">About Us</a></li>
-                            <li><a href="./team">Our Team</a></li>
-                            <li><a href="./contact">Contact</a></li>
+                            <li class="../index"><a href="">Home</a></li>
+                            <li><a href="../about">About Us</a></li>
+                            <li><a href="../team">Our Team</a></li>
+                            <li><a href="../contact">Contact</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -86,7 +86,7 @@
                         <div class="to-social">
             <a href="https://www.facebook.com/nitkracing"><i class="fa fa-facebook"></i></a>
             <a href="https://twitter.com/nitkracing"><i class="fa fa-twitter"></i></a>
-            <a href="#"><i class="fa fa-youtube-play"></i></a>
+            <a href="https://www.youtube.com/channel/UCboCcz11TdW0tMa_5n-eiyA"><i class="fa fa-youtube-play"></i></a>
             <a href="https://www.instagram.com/nitkracing/"><i class="fa fa-instagram"></i></a>
                         </div>
                     </div>
@@ -103,7 +103,7 @@
     <section class="hero-section">
         <div class="hs-slider owl-carousel">
             {% for banner in banners_list %}
-                {% if banner.page_to_display == 3 %}
+                {% if banner.page_to_display == 7 %}
                <div class="hs-item set-bg"  data-setbg="{{banner.bg_img.url}}">
                     <div class="container">
                         <div class="row">
@@ -133,30 +133,54 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
+                     <div class="row">
                 <div class="col-lg-3 col-sm-6">
                     <div class="cs-item">
-                       <a href="../aerodynamics"> <span class="flaticon-034-stationary-bike"></span></a>
+                        <a href="../aerodynamics"> <img src="{%static 'img/AD_w.png' %}" alt=""> </a>
                         <h4>AERODYNAMICS</h4>
                     </div>
                 </div>
                 <div class="col-lg-3 col-sm-6">
                     <div class="cs-item">
-                        <a href="../vehicledynamics"><span class="flaticon-034-stationary-bike"></span></a>
+                        <a href="../vehicledynamics"><img src="{%static 'img/VD_w.png' %}" alt=""></a>
                         <h4>VEHICLE DYNAMICS</h4>
                     </div>
                 </div>
                 <div class="col-lg-3 col-sm-6">
                     <div class="cs-item"><a href="../powertrain">
-                        <span class="flaticon-034-stationary-bike"></span></a>
+                        <img src="{%static 'img/PT_w.png' %}" alt=""></a>
                         <h4>POWERTRAIN</h4>
                     </div>
                 </div>
                 <div class="col-lg-3 col-sm-6">
                     <div class="cs-item"><a href="../electronics">
-                        <span class="flaticon-034-stationary-bike"></span></a>
+                       <img src="{%static 'img/EL_w.png' %}" alt=""></a>
                         <h4>ELECTRONICS</h4>
                     </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section class="blog-section spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 p-0">
+                    <div class="blog-item">
+                      {% for blog in blog_list %}
+                          {% if blog.blog_filter == 3 %}
+                        <div class="bi-text">
+                            <h5>{{ blog.title }}</h5>
+                            <ul>
+                                <li>{{ blog.author }}</li>
+                                <li>{{ blog.updated_on }}</li>
+                            </ul>
+                            <p>{{ blog.content }}</p>
+                        </div>
+                          {% endif %}
+                       {% endfor %}
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -165,17 +189,6 @@
 
     <!-- Classes Section Begin -->
 
-
-    <div class="gallery-section">
-        <div class="gallery">
-            <div class="grid-sizer"></div>
-            {% for image in image_gallery_short %}
-                            <div class="gs-item grid-wide set-bg" data-setbg="{{ image.img.url }}">
-                <a href="{{ image.img.url }}" class="thumb-icon image-popup"><i class="fa fa-picture-o"></i></a>
-            </div>
-            {% endfor %}
-        </div>
-    </div>
     <!-- Gallery Section End -->
 
     <!-- Team Section Begin -->
@@ -192,23 +205,22 @@
                 </div>
             </div>
             <div class="row">
-            {% for member in members_list %}
-                {%  if member.sig == 1 %}
-                <div class="hs-item set-bg" data-setbg="{{member.member_img.url}}">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-6 offset-lg-6">
-                                <div class="hi-text">
-                                    <span>{{ member.member_name }}</span>
-                                    <h1>{{ member.post }}</h1>
-                                   <small>{{ member.insta }}<br>{{ member.linkdin }}</small>
-                                </div>
+             <div class="ts-slider owl-carousel">
+                    {% for member in full_member_list %}
+                        {% if member.sig == 3 %}
+                        <div class="col-lg-4">
+                        <div class="ts-item set-bg" data-setbg="{{ member.member_img.url }}">
+                            <div class="ts_text">
+                                <h4>{{ member.member_name }}</h4>
+                                <span>{{ member.post }}</span>
                             </div>
                         </div>
                     </div>
+                        {% endif %}
+                    {% endfor %}
                 </div>
-                {% endif %}
-            {% endfor %}
+                </div>
+            </div>
                 </div>
             </div>
         </div>
