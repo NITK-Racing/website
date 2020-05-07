@@ -3,7 +3,7 @@ from .models import *
 
 
 def index(request):
-    banners_list = Banner.objects.all()
+    banners_list = Banner.objects.filter(page_to_display=1)
     sponsors_list = Sponsor.objects.all()
     sig_head_list = Member.objects.filter(sig_head=True)
     image_gallery_full = Image.objects.all()
@@ -18,7 +18,7 @@ def index(request):
 
 
 def about(request):
-    banners_list = Banner.objects.all()
+    banners_list = Banner.objects.filter(page_to_display=2)
     blog_list = Blog.objects.all()
     sig_head_list = Member.objects.filter(sig_head=True)
     image_gallery_full = Image.objects.all()
@@ -30,13 +30,12 @@ def about(request):
                'image_gallery_full': image_gallery_full,
                'image_gallery_short': image_gallery_short,
                'members_list': full_member_list,
-
                }
     return render(request, 'about.html', context=context)
 
 
 def contact(request):
-    banners_list = Banner.objects.all()
+    banners_list = Banner.objects.filter(page_to_display=3)
     sig_head_list = Member.objects.filter(sig_head=True)
     full_member_list = Member.objects.all()
     image_gallery_full = Image.objects.all()
@@ -52,12 +51,12 @@ def contact(request):
 
 def team(request):
     full_member_list = Member.objects.all()
-    blog_list = Blog.objects.all()
-    banners_list = Banner.objects.all()
+
+    banners_list = Banner.objects.filter(page_to_display=4)
     sig_head_list = Member.objects.filter(sig_head=True)
     image_gallery_full = Image.objects.all()
     image_gallery_short = Image.objects.filter(display_on_index=True)
-    context = {'blog_list': blog_list,
+    context = {
                'sig_head_list': sig_head_list,
                'banners_list': banners_list,
                'image_gallery_full': image_gallery_full,
@@ -68,10 +67,10 @@ def team(request):
 
 
 def aerodynamics(request):
-    full_member_list = Member.objects.all()
-    blog_list = Blog.objects.all()
-    banners_list = Banner.objects.all()
-    document_list = Document.objects.all()
+    full_member_list = Member.objects.filter(sig=1)
+    blog_list = Blog.objects.filter(blog_filter=1)
+    banners_list = Banner.objects.filter(page_to_display=5)
+    document_list = Document.objects.filter(subsystem_filter=1)
     context = {'full_member_list': full_member_list,
                'banners_list': banners_list,
                'blog_list': blog_list,
@@ -81,23 +80,23 @@ def aerodynamics(request):
 
 
 def vehicledynamics(request):
-    full_member_list = Member.objects.all()
-    blog_list = Blog.objects.all()
-    banners_list = Banner.objects.all()
-    document_list = Document.document.all()
-    context = {'full_member_list': full_member_list,
-               'banners_list': banners_list,
-               'blog_list': blog_list,
-               'document_list': document_list
-               }
-    return render(request, 'vehicledynamics.html', context=context)
+        full_member_list = Member.objects.filter(sig=2)
+        blog_list = Blog.objects.filter(blog_filter=2)
+        banners_list = Banner.objects.filter(page_to_display=6)
+        document_list = Document.objects.filter(subsystem_filter=2)
+        context = {'full_member_list': full_member_list,
+                   'banners_list': banners_list,
+                   'blog_list': blog_list,
+                   'document_list': document_list
+                   }
+        return render(request, 'vehicledynamics.html', context=context)
 
 
 def powertrain(request):
-    full_member_list = Member.objects.all()
-    blog_list = Blog.objects.all()
-    banners_list = Banner.objects.all()
-    document_list = Document.document.all()
+    full_member_list = Member.objects.filter(sig=3)
+    blog_list = Blog.objects.filter(blog_filter=3)
+    banners_list = Banner.objects.filter(page_to_display=7)
+    document_list = Document.objects.filter(subsystem_filter=3)
     context = {'full_member_list': full_member_list,
                'banners_list': banners_list,
                'blog_list': blog_list,
@@ -107,10 +106,10 @@ def powertrain(request):
 
 
 def electronics(request):
-    full_member_list = Member.objects.all()
-    blog_list = Blog.objects.all()
-    banners_list = Banner.objects.all()
-    document_list = Document.document.all()
+    full_member_list = Member.objects.filter(sig=4)
+    blog_list = Blog.objects.filter(blog_filter=4)
+    banners_list = Banner.objects.filter(page_to_display=8)
+    document_list = Document.objects.filter(subsystem_filter=4)
     context = {'full_member_list': full_member_list,
                'banners_list': banners_list,
                'blog_list': blog_list,
