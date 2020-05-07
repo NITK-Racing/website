@@ -106,10 +106,12 @@ def powertrain(request):
 
 
 def electronics(request):
+
     full_member_list = Member.objects.filter(sig=4)
     blog_list = Blog.objects.filter(blog_filter=4)
     banners_list = Banner.objects.filter(page_to_display=8)
     document_list = Document.objects.filter(subsystem_filter=4)
+
     context = {'full_member_list': full_member_list,
                'banners_list': banners_list,
                'blog_list': blog_list,
