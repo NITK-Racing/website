@@ -229,8 +229,11 @@
 
                 <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.js"></script>
 <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
-<model-viewer src="{% static 'img/Chassis Concept Assembly v100 - Amaron_9AH_Sealed-1.glb' %}" alt="A 3D model of an astronaut" auto-rotate camera-controls></model-viewer>
+                {% for document in document_list %}
+<model-viewer src="{{ document.document.url }}" alt="A 3D model " auto-rotate camera-controls>
 
+</model-viewer>
+{% endfor %}
             </div>
         </div>
     </section>
