@@ -40,7 +40,7 @@
         <div class="canvas-social">
             <a href="https://www.facebook.com/nitkracing"><i class="fa fa-facebook"></i></a>
             <a href="https://twitter.com/nitkracing"><i class="fa fa-twitter"></i></a>
-            <a href="#"><i class="fa fa-youtube-play"></i></a>
+            <a href="https://www.youtube.com/channel/UCboCcz11TdW0tMa_5n-eiyA"><i class="fa fa-youtube-play"></i></a>
             <a href="https://www.instagram.com/nitkracing/"><i class="fa fa-instagram"></i></a>
         </div>
     </div>
@@ -73,7 +73,7 @@
 
             <a href="https://www.facebook.com/nitkracing"><i class="fa fa-facebook"></i></a>
             <a href="https://twitter.com/nitkracing"><i class="fa fa-twitter"></i></a>
-            <a href="#"><i class="fa fa-youtube-play"></i></a>
+            <a href="https://www.youtube.com/channel/UCboCcz11TdW0tMa_5n-eiyA"><i class="fa fa-youtube-play"></i></a>
             <a href="https://www.instagram.com/nitkracing/"><i class="fa fa-instagram"></i></a>
 
                         </div>
@@ -85,19 +85,24 @@
             </div>
         </div>
     </header>
-    <section class="breadcrumb-section set-bg" data-setbg="../static/img/banners/banner-1.jpg">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <div class="breadcrumb-text">
-                        <h2>About us</h2>
-                        <div class="bt-option">
-                            <a href="../index">Home</a>
-
+   <section class="hero-section">
+        <div class="hs-slider owl-carousel">
+            {% for banner in banners_list %}
+                {% if banner.page_to_display == 1 %}
+               <div class="hs-item set-bg"  data-setbg="{{banner.bg_img.url}}">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-6 offset-lg-6">
+                                <div class="hi-text">
+                                    <span>{{ banner.small_text }}</span>
+                                    <h1>{{ banner.large_text }}</h1>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
+                </div> {% endif %}
+            {% endfor %}
+
         </div>
     </section>
 
@@ -111,27 +116,9 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
 
-                <div class="ts-slider owl-carousel">
-                    {% for blog  in blogs_list %}
-                        <div class="col-lg-4">
-                            <div class="bi_text">
-                                <a>{{ blog.title }}</a>
-                                <ul>
-                                <li>{{ blog.created_on }}</li>
-                                <li>{{ blog.author }}</li>
-                            </ul>
-                                <p>{{ blog.content }}</p>
-
-                            </div>
-                        </div>
-                    </div>
-                    {% endfor %}
-                </div>
             </div>
 
-        </div>
     </section>
     <!-- ChoseUs Section End -->
 
@@ -162,31 +149,32 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-title">
-                        <span>BLOG POSTS</span>
-                        <h2>TEAM MEMBERS</h2>
+                        <h2>BLOG POSTS</h2>
                     </div>
+
+            <div class="row">
+                <div class="col-lg-8 p-0">
+                    <div class="blog-item">
+                      {% for blog in blog_list %}
+                          {% if blog.blog_filter == 1 %}
+                        <div class="bi-text">
+                            <h5>{{ blog.title }}</h5>
+                            <ul>
+                                <li>{{ blog.author }}</li>
+                                <li>{{ blog.updated_on }}</li>
+                            </ul>
+                            <p>{{ blog.content }}</p>
+                        </div>
+                          {% endif %}
+                       {% endfor %}
+
+
                 </div>
             </div>
-
- <div class="hs-slider owl-carousel">
-            {% for member in members_list %}
-                <div class="hs-item set-bg" data-setbg="{{member.member_img.url}}">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-6 offset-lg-6">
-                                <div class="hi-text">
-                                    <span>{{ member.member_name }}</span>
-                                    <h1>{{ member.post }}</h1>
-                                   <small>{{ member.insta }}<br>{{ member.linkdin }}</small>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+        </div>
                 </div>
-            {% endfor %}
-
-
-        </div>        </div>
+            </div>
+        </div>
     </section>
     <div class="gettouch-section">
         <div class="container">
