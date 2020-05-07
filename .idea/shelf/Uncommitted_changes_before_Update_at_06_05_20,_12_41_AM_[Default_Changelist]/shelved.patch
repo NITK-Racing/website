@@ -1,0 +1,16 @@
+Index: mysite/admin.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>from django.contrib import admin\nfrom .models import *\n# Register your models here.\nadmin.site.register(Sponsor)\nadmin.site.register(Image)\nadmin.site.register(Member)\nadmin.site.register(Banner)\n\n\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- mysite/admin.py	(revision 4e511bcbc73f0efb1eccc92d93403e8e0d032a44)
++++ mysite/admin.py	(date 1588169599838)
+@@ -5,5 +5,5 @@
+ admin.site.register(Image)
+ admin.site.register(Member)
+ admin.site.register(Banner)
+-
++admin.site.register(Blog)
+ 

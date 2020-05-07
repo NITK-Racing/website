@@ -1,0 +1,24 @@
+<changelist name="Uncommitted_changes_before_Update_at_07_05_20,_2_31_AM_[Default_Changelist]" date="1588798901199" recycled="true" deleted="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_07_05_20,_2_31_AM_[Default_Changelist]/shelved.patch" />
+  <option name="DESCRIPTION" value="Uncommitted changes before Update at 07/05/20, 2:31 AM [Default Changelist]" />
+  <binary>
+    <option name="BEFORE_PATH" value=".idea/shelf/Uncommitted_changes_before_Update_at_29_04_20,_4_42_PM_[Default_Changelist]/db.sqlite3" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="mysite/static/img/AD_w.png" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_07_05_20,_2_31_AM_[Default_Changelist]/AD_w.png" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="db.sqlite3" />
+    <option name="AFTER_PATH" value="db.sqlite3" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_07_05_20,_2_31_AM_[Default_Changelist]/db.sqlite3" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="mysite/static/img/Media_w.png" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_07_05_20,_2_31_AM_[Default_Changelist]/Media_w.png" />
+  </binary>
+</changelist>
