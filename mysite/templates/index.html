@@ -12,6 +12,7 @@
     width:50px;
     height:50px;
 }
+
 </style>
 <head>
     <meta charset="UTF-8">
@@ -50,16 +51,24 @@
         </div>
         <nav class="canvas-menu mobile-menu">
             <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="../about">About Us</a></li>
-                <li><a href="../team">Our Team</a></li>
-                <li><a href="../contact">Contact</a></li>
-            </ul>
+                            <li class="./active"><a href="">Home</a></li>
+                            <li><a href="../about">About Us</a></li>
+                            <li><a href="../team">Our Team</a></li>
+                             <li><a href="../gallery">Gallery</a></li>
+                            <li><a href="#">Subsystems</a>
+                            <ul class="dropdown">
+                                    <li><a href="../aerodynamics">Aerodynamics</a></li>
+                                    <li><a href="../vehicledynamics">Vehicle Dynamics</a></li>
+                                    <li><a href="../powertrain">Powertrain</a></li>
+                                    <li><a href="../electronics">Electronics</a></li>
+                                </ul></li>
+                             <li><a href="../contact">Contact</a></li>
+                        </ul>
         </nav>
         <div id="mobile-menu-wrap"></div>
         <div class="canvas-social">
             <a href="https://www.facebook.com/nitkracing"><i class="fa fa-facebook"></i></a>
-            <a href="https://twitter.com/nitkracing"><i class="fa fa-twitter"></i></a>
+            <a href="https://www.linkedin.com/company/nitk-racing"><i class="fa fa-linkedin"></i></a>
             <a href="https://www.youtube.com/channel/UCboCcz11TdW0tMa_5n-eiyA"><i class="fa fa-youtube-play"></i></a>
             <a href="https://www.instagram.com/nitkracing/"><i class="fa fa-instagram"></i></a>
         </div>
@@ -80,9 +89,17 @@
                             <li class="./active"><a href="">Home</a></li>
                             <li><a href="../about">About Us</a></li>
                             <li><a href="../team">Our Team</a></li>
-                            <li><a href="../contact">Contact</a></li>
-
+                             <li><a href="../gallery">Gallery</a></li>
+                            <li><a href="#">Subsystems</a>
+                            <ul class="dropdown">
+                                    <li><a href="../aerodynamics">Aerodynamics</a></li>
+                                    <li><a href="../vehicledynamics">Vehicle Dynamics</a></li>
+                                    <li><a href="../powertrain">Powertrain</a></li>
+                                    <li><a href="../electronics">Electronics</a></li>
+                                </ul></li>
+                             <li><a href="../contact">Contact</a></li>
                         </ul>
+
                     </nav>
                 </div>
                 <div class="col-lg-3">
@@ -92,7 +109,7 @@
                         </div>
                         <div class="to-social">
             <a href="https://www.facebook.com/nitkracing"><i class="fa fa-facebook"></i></a>
-            <a href="https://twitter.com/nitkracing"><i class="fa fa-twitter"></i></a>
+            <a href="https://www.linkedin.com/company/nitk-racing"><i class="fa fa-linkedin"></i></a>
             <a href="https://www.youtube.com/channel/UCboCcz11TdW0tMa_5n-eiyA"><i class="fa fa-youtube-play"></i></a>
             <a href="https://www.instagram.com/nitkracing/"><i class="fa fa-instagram"></i></a>
                         </div>
@@ -106,10 +123,9 @@
     </header>
     <!-- Header End -->
  <section class="hero-section">
-        <div class="hs-slider owl-carousel">
+        <div class="hs-slider owl-carousel ss">
             {% for banner in banners_list %}
-                {% if banner.page_to_display == 1 %}
-               <div class="hs-item set-bg"  data-setbg="{{banner.bg_img.url}}">
+    <div class="hs-item set-bg"  data-setbg="{{banner.bg_img.url}}">
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-6 offset-lg-6">
@@ -120,58 +136,48 @@
                             </div>
                         </div>
                     </div>
-                </div> {% endif %}
+                </div>
             {% endfor %}
-
-        </div>
+            </div>
     </section>
 
-    <!-- ChoseUs Section Begin -->
-    <section class="choseus-section spad">
-        <div class="container">
+
+  <!-- Next and previous buttons -->
+
+
+    <!-- Team Section Begin -->
+    <section class="team-section spad">
+            <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="section-title">
-                        <span>A DEEPER LOOK</span>
-                        <h2>OUR SUB-SYSTEMS</h2>
+                    <div class="team-title">
+                        <div class="section-title">
+                            <h2>MEET THE SQUAD</h2>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-3 col-sm-6">
-                    <div class="cs-item">
-                        <a href="../aerodynamics">
-                            <img src="{%static 'img/AD_w.png' %}" alt="" height="350" width="300"> </a>
-                        <h4>AERODYNAMICS</h4>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6">
-                    <div class="cs-item">
-                        <a href="../vehicledynamics">
-                            <img src="{%static 'img/VD_w.png' %}" alt="" height="350" width="300"></a>
-                        <h4>VEHICLE DYNAMICS</h4>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6">
-                    <div class="cs-item"><a href="../powertrain">
-                        <img src="{%static 'img/PT_w.png' %}" alt="" height="350" width="300"></a>
-                        <h4>POWERTRAIN</h4>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6">
-                    <div class="cs-item"><a href="../electronics">
-                       <img src="{%static 'img/EL_w.png' %}" alt="" height="350" width="300"></a>
-                        <h4>ELECTRONICS</h4>
-                    </div>
-                </div>
+                <div class="ts-slider owl-carousel " >
+                    {% for sig_head in sig_head_list %}
+                        <div class="col-lg-4">
 
+                        <div class="ts-item set-bg" data-setbg="{{ sig_head.member_img.url }}">
+                            <div class="ts_text">
+                                <h4>{{ sig_head.member_name }}</h4>
+                                <span>{{ sig_head.post }}</span>
+                            </div>
+                        </div>
+                        </div>
+                    {% endfor %}
+                </div>
             </div>
-        </div>
-    </section>
-    <!-- ChoseUs Section End -->
 
-    <!-- Classes Section Begin -->
-    <section class="classes-section spad">
+        </div>
+
+    </section>
+    <!-- Team Section End -->
+ <section class="classes-section spad">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -189,7 +195,6 @@
                         <div class="ci-pic">
                             <img src="{{ sponsor.img.url }}" alt="">
                         </div>
-
                     </div>
                 </div>
                 {% endfor %}
@@ -197,40 +202,6 @@
             </div>
         </div>
     </section>
-
-
-    <!-- Gallery Section End -->
-
-    <!-- Team Section Begin -->
-    <section class="team-section spad">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="team-title">
-                        <div class="section-title">
-
-                            <h2>MEET THE SQUAD</h2>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="ts-slider owl-carousel">
-                    {% for sig_head in sig_head_list %}
-                        <div class="col-lg-4">
-                        <div class="ts-item set-bg" data-setbg="{{ sig_head.member_img.url }}">
-                            <div class="ts_text">
-                                <h4>{{ sig_head.member_name }}</h4>
-                                <span>{{ sig_head.post }}</span>
-                            </div>
-                        </div>
-                    </div>
-                    {% endfor %}
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Team Section End -->
 
     <!-- Get In Touch Section Begin -->
     <div class="gettouch-section">
@@ -273,9 +244,9 @@
                         <div class="fa-logo">
                             <a href="#"><img src="{%static 'img/logo.png'  %}" alt=""></a>
                         </div>
-
                     </div>
                 </div>
+            </div>
 
             <div class="row">
                 <div class="col-lg-12 text-center">

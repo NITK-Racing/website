@@ -24,34 +24,31 @@ def about(request):
     image_gallery_full = Image.objects.all()
     full_member_list = Member.objects.all()
     image_gallery_short = Image.objects.filter(display_on_index=True)
+    document_list = Document.objects.filter(subsystem_filter=5)
     context = {'banners_list': banners_list,
                'blog_list': blog_list,
                'sig_head_list': sig_head_list,
                'image_gallery_full': image_gallery_full,
                'image_gallery_short': image_gallery_short,
                'members_list': full_member_list,
+               'document_list': document_list
                }
     return render(request, 'about.html', context=context)
 
 
 def contact(request):
     banners_list = Banner.objects.filter(page_to_display=3)
-    sig_head_list = Member.objects.filter(sig_head=True)
-    full_member_list = Member.objects.all()
     image_gallery_full = Image.objects.all()
     image_gallery_short = Image.objects.filter(display_on_index=True)
     context = {'banners_list': banners_list,
-               'sig_head_list': sig_head_list,
                'image_gallery_full': image_gallery_full,
-               'image_gallery_short': image_gallery_short,
-               'full_member_list': full_member_list,
+               'image_gallery_short': image_gallery_short
                }
     return render(request, 'contact.html', context=context)
 
 
 def team(request):
     full_member_list = Member.objects.all()
-
     banners_list = Banner.objects.filter(page_to_display=4)
     sig_head_list = Member.objects.filter(sig_head=True)
     image_gallery_full = Image.objects.all()
@@ -121,8 +118,9 @@ def electronics(request):
 def gallery(request):
     image_gallery_full = Image.objects.all()
     image_gallery_short = Image.objects.filter(display_on_index=True)
+    banners_list = Banner.objects.filter(page_to_display=9)
     context = {'image_gallery_short': image_gallery_short,
                'image_gallery_full': image_gallery_full,
-
+               'banners_list': banners_list
                }
-    return render(request, 'electronics.html', context=context)
+    return render(request, 'gallery.html', context=context)
