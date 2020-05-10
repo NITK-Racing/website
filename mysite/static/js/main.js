@@ -79,7 +79,7 @@
         navText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
         smartSpeed: 1200,
         autoHeight: false,
-        autoplay: false
+        autoplay: true
     });
 
     /*------------------
@@ -89,11 +89,13 @@
         loop: true,
         margin: 0,
         items: 3,
+        nav: true,
         dots: true,
         dotsEach: 2,
         smartSpeed: 1200,
         autoHeight: false,
         autoplay: true,
+        navText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
         responsive: {
             320: {
                 items: 1,
@@ -113,13 +115,24 @@
     $(".ts_slider").owlCarousel({
         loop: true,
         margin: 0,
-        items: 1,
-        dots: false,
+        items: 3,
+        dots: true,
         nav: true,
         navText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
-        smartSpeed: 1200,
+        smartSpeed: 1800,
         autoHeight: false,
-        autoplay: true
+        autoplay: true,
+        responsive: {
+            320: {
+                items: 1,
+            },
+            768: {
+                items: 2,
+            },
+            992: {
+                items: 3,
+            }
+        }
     });
 
     /*------------------

@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="zxx">
 <style>
-    p2{
-        padding-top:30px;
+    p2 {
+        padding-top: 30px;
     }
 
 </style>
@@ -20,7 +20,7 @@
     <!-- Css Styles -->
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" type="text/css">
-    <link rel="stylesheet" href="{%  static 'css/font-awesome.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}" type="text/css">
     <link rel="stylesheet" href="{% static 'css/flaticon.css' %}" type="text/css">
     <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}" type="text/css">
     <link rel="stylesheet" href="{% static 'css/barfiller.css' %}" type="text/css">
@@ -31,141 +31,114 @@
 </head>
 
 <body>
-    <div id="preloder">
-        <div class="loader"></div>
+<div id="preloder">
+    <div class="loader"></div>
+</div>
+<div class="offcanvas-menu-overlay"></div>
+<div class="offcanvas-menu-wrapper">
+    <div class="canvas-close">
+        <i class="fa fa-close"></i>
     </div>
-    <div class="offcanvas-menu-overlay"></div>
-    <div class="offcanvas-menu-wrapper">
-        <div class="canvas-close">
-            <i class="fa fa-close"></i>
-        </div>
-        <div class="canvas-search search-switch">
-            <i class="fa fa-search"></i>
-        </div>
-        <nav class="canvas-menu mobile-menu">
+    <div class="canvas-search search-switch">
+        <i class="fa fa-search"></i>
+    </div>
+    <nav class="canvas-menu mobile-menu">
         <ul>
-                            <li class="./active"><a href="">Home</a></li>
-                            <li><a href="../about">About Us</a></li>
-                            <li><a href="../team">Our Team</a></li>
-                             <li><a href="../gallery">Gallery</a></li>
-                            <li><a href="#">Subsystems</a>
-                            <ul class="dropdown">
-                                    <li><a href="../aerodynamics">Aerodynamics</a></li>
-                                    <li><a href="../vehicledynamics">Vehicle Dynamics</a></li>
-                                    <li><a href="../powertrain">Powertrain</a></li>
-                                    <li><a href="../electronics">Electronics</a></li>
-                                </ul></li>
-                             <li><a href="../contact">Contact</a></li>
-                        </ul>
+            <li class="./active"><a href="">Home</a></li>
+            <li><a href="../about">About Us</a></li>
+            <li><a href="../team">Our Team</a></li>
+            <li><a href="../gallery">Gallery</a></li>
+            <li><a href="#">Subsystems</a>
+                <ul class="dropdown">
+                    <li><a href="../aerodynamics">Aerodynamics</a></li>
+                    <li><a href="../vehicledynamics">Vehicle Dynamics</a></li>
+                    <li><a href="../powertrain">Powertrain</a></li>
+                    <li><a href="../electronics">Electronics</a></li>
+                </ul>
+            </li>
+            <li><a href="../contact">Contact</a></li>
+        </ul>
 
-        </nav>
-        <div id="mobile-menu-wrap"></div>
-        <div class="canvas-social">
-            <a href="https://www.facebook.com/nitkracing"><i class="fa fa-facebook"></i></a>
-            <a href="https://www.linkedin.com/company/nitk-racing"><i class="fa fa-linkedin"></i></a>
-            <a href="https://www.youtube.com/channel/UCboCcz11TdW0tMa_5n-eiyA"><i class="fa fa-youtube-play"></i></a>
-            <a href="https://www.instagram.com/nitkracing/"><i class="fa fa-instagram"></i></a>
+    </nav>
+    <div id="mobile-menu-wrap"></div>
+    <div class="canvas-social">
+        <a href="https://www.facebook.com/nitkracing"><i class="fa fa-facebook"></i></a>
+        <a href="https://www.linkedin.com/company/nitk-racing"><i class="fa fa-linkedin"></i></a>
+        <a href="https://www.youtube.com/channel/UCboCcz11TdW0tMa_5n-eiyA"><i class="fa fa-youtube-play"></i></a>
+        <a href="https://www.instagram.com/nitkracing/"><i class="fa fa-instagram"></i></a>
+    </div>
+</div>
+<header class="header-section">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-3">
+                <div class="logo">
+                    <a href="../">
+                        <img src="{% static 'img/logo.png' %}" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <nav class="nav-menu">
+                    <ul>
+                        <li><a href="../index">Home</a></li>
+                        <li><a href="../about">About Us</a></li>
+                        <li><a href="../team">Our Team</a></li>
+                        <li><a href="../gallery">Gallery</a></li>
+                        <li><a href="../contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="col-lg-3">
+                <div class="top-option">
+                    <div class="to-search search-switch">
+                        <i class="fa fa-search"></i>
+                    </div>
+                    <div class="to-social">
+                        <a href="https://www.facebook.com/nitkracing"><i class="fa fa-facebook"></i></a>
+                        <a href="https://www.linkedin.com/company/nitk-racing"><i class="fa fa-linkedin"></i></a>
+                        <a href="https://www.youtube.com/channel/UCboCcz11TdW0tMa_5n-eiyA"><i
+                                class="fa fa-youtube-play"></i></a>
+                        <a href="https://www.instagram.com/nitkracing/"><i class="fa fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="canvas-open">
+            <i class="fa fa-bars"></i>
         </div>
     </div>
-    <header class="header-section">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-3">
-                    <div class="logo">
-                        <a href="../">
-                            <img src="{%static 'img/logo.png' %}" alt="">
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <nav class="nav-menu">
-                        <ul>
-                            <li ><a href="../index">Home</a></li>
-                            <li><a href="../about">About Us</a></li>
-                            <li><a href="../team">Our Team</a></li>
-                              <li><a href="../gallery">Gallery</a></li>
-                            <li><a href="../contact">Contact</a></li>
-                        </ul>
+</header>
+<!-- Header End -->
 
-                        <div class="row">
-                <div class="col-md-3 col-sm-3 col-xs-3">
-                    <div class="cs-item">
-                        <a href="../aerodynamics">
-                            <img src="{%static 'img/AD_w.png' %}" alt="" height="150" width="130"> </a>
-                     <ul> <li>  <a href="../aerodynamics">AERODYNAMICS</a></li></ul>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-3 col-xs-3">
-                    <div class="cs-item">
-                        <a href="../vehicledynamics">
-                            <img src="{%static 'img/VD_w.png' %}" alt="" height="150" width="130"></a>
-                        <ul>  <li> <a href="../vehicledynamics">VEHICLE DYNAMICS</a></li></ul>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-3 col-xs-3">
-                    <div class="cs-item"><a href="../powertrain">
-                        <img src="{%static 'img/PT_w.png' %}" alt="" height="150" width="130"></a>
-                        <ul> <li><a href="../powertrain">POWERTRAIN</a></li></ul>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-3 col-xs-3">
-                    <div class="cs-item"><a href="../electronics">
-                       <img src="{%static 'img/EL_w.png' %}" alt="" height="150" width="130"></a>
-                        <ul> <li> <a href="../electronics">ELECTRONICS</a></li></ul>
-                    </div>
-                </div>
-
-            </div> </nav>
-                </div>
-                <div class="col-lg-3">
-                    <div class="top-option">
-                        <div class="to-search search-switch">
-                            <i class="fa fa-search"></i>
-                        </div>
-                        <div class="to-social">
-            <a href="https://www.facebook.com/nitkracing"><i class="fa fa-facebook"></i></a>
-             <a href="https://www.linkedin.com/company/nitk-racing"><i class="fa fa-linkedin"></i></a>
-            <a href="https://www.youtube.com/channel/UCboCcz11TdW0tMa_5n-eiyA"><i class="fa fa-youtube-play"></i></a>
-            <a href="https://www.instagram.com/nitkracing/"><i class="fa fa-instagram"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="canvas-open">
-                <i class="fa fa-bars"></i>
-            </div>
-        </div>
-    </header>
-    <!-- Header End -->
-
-    <!-- Hero Section Begin -->
-    <section class="hero-section">
-        <div class="hs-slider owl-carousel">
-            {% for banner in banners_list %}
-                <div class="hs-item set-bg"  data-setbg="{{banner.bg_img.url}}">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-6 offset-lg-6">
-                                <div class="hi-text">
-                                    <span>{{ banner.small_text }}</span>
-                                    <h1>{{ banner.large_text }}</h1>
-                                </div>
+<!-- Hero Section Begin -->
+<section class="hero-section">
+    <div class="hs-slider owl-carousel">
+        {% for banner in banners_list %}
+            <div class="hs-item set-bg" data-setbg="{{ banner.bg_img.url }}">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 offset-lg-6">
+                            <div class="hi-text">
+                                <span>{{ banner.small_text }}</span>
+                                <h1>{{ banner.large_text }}</h1>
                             </div>
                         </div>
                     </div>
                 </div>
-            {% endfor %}
-        </div>
-    </section>
-    <!-- Hero Section End -->
+            </div>
+        {% endfor %}
+    </div>
+</section>
+<!-- Hero Section End -->
 
- <section class="blog-section spad">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 p-0">
-                    <div class="blog-item">
-                      {% for blog in blog_list %}
-                          <div class="bi-text">
+<section class="blog-section spad">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 p-0">
+                <div class="blog-item">
+                    {% for blog in blog_list %}
+                        <div class="bi-text">
                             <h5>{{ blog.title }}</h5>
                             <ul>
                                 <li>{{ blog.author }}</li>
@@ -173,32 +146,55 @@
                             </ul>
                             <p>{{ blog.content }}</p>
                         </div>
-                      {% endfor %}
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Gallery Section End -->
+
+<!-- 3d Section -->
+<section class="gallery-section">
+    <div class="section-title">
+                <span>A glimpse under the hood</span>
+                <h2>3D MODELS</h2>
+            </div>
+    <div class="gallery">
+        <div class="grid-sizer"></div>
+        <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.js"></script>
+        <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+        {% for document in document_list %}
+            {% if forloop.counter0|divisibleby:2 %}
+            <model-viewer class="gs-item grid-wide" src="{{ document.document.url }}" alt="{{ document.description }} " auto-rotate camera-controls>
+            </model-viewer>
+            {% else %}
+                <model-viewer class="gs-item" src="{{ document.document.url }}" alt="{{ document.description }}" auto-rotate camera-controls>
+                </model-viewer>
+            {% endif %}
+        {% endfor %}
+
+    </div>
+</section>
+
+<!-- Team Section Begin -->
+<section class="team-section spad">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="team-title">
+                    <div class="section-title">
+                        <h2>MEET THE SQUAD</h2>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+        <div class="row">
+            <div class="ts-slider owl-carousel">
+                {% for member in full_member_list %}
 
-    <!-- Gallery Section End -->
-
-    <!-- Team Section Begin -->
-    <section class="team-section spad">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="team-title">
-                        <div class="section-title">
-                            <h2>MEET THE SQUAD</h2>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-<div class="ts-slider owl-carousel">
-                    {% for member in full_member_list %}
-
-                        <div class="col-lg-4">
+                    <div class="col-lg-4">
                         <div class="ts-item set-bg" data-setbg="{{ member.member_img.url }}">
                             <div class="ts_text">
                                 <h4>{{ member.member_name }}</h4>
@@ -206,103 +202,189 @@
                             </div>
                         </div>
                     </div>
-                    {% endfor %}
-                </div>
-                </div>
-            </div>
-        </div>
-    </section>
- <section class="choseus-section spad">
-        <div class="container">
-            <div class="row">
-                <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.js"></script>
-                <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
-                {% for document in document_list %}<div class="col-lg-4">
-                    <model-viewer src="{{ document.document.url }}" alt="A 3D model " auto-rotate camera-controls>
-                    </model-viewer></div>
                 {% endfor %}
             </div>
         </div>
-    </section>
-
-    <!-- Team Section End -->
-
-    <!-- Get In Touch Section Begin -->
-    <div class="gettouch-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="gt-text">
-                        <i class="fa fa-map-marker"></i>
-                        <p>National Institute of Technology<br> NH 66, Srinivasnagar, Surathkal<br> Mangalore
-                          Karnataka <br>
-                            575025</p>
+    </div>
+    </div>
+</section>
+<!-- substem select-->
+<section class="choseus-section spad">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="section-title">
+                <span>What's under the hood?</span>
+                <h2>OUR SUBSYSTEMS</h2>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3 col-sm-3 col-xs-3">
+            <div class="cs-item">
+                <a href="../aerodynamics">
+                    <img src="{% static 'img/AD_w.png' %}" alt="" height="150" width="130"> </a>
+                <h4><a href="../aerodynamics">AERODYNAMICS</a></h4>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-3 col-xs-3">
+            <div class="cs-item">
+                <a href="../vehicledynamics">
+                    <img src="{% static 'img/VD_w.png' %}" alt="" height="150" width="130"></a>
+                <h4><a href="../vehicledynamics">VEHICLE DYNAMICS</a></h4>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-3 col-xs-3">
+            <div class="cs-item"><a href="../powertrain">
+                <img src="{% static 'img/PT_w.png' %}" alt="" height="150" width="130"></a>
+                <h4><a href="../powertrain">POWERTRAIN</a></h4>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-3 col-xs-3">
+            <div class="cs-item"><a href="../electronics">
+                <img src="{% static 'img/EL_w.png' %}" alt="" height="150" width="130"></a>
+                <h4><a href="../electronics">ELECTRONICS</a></h4>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- sponsors slider-->
+<section class="testimonial-section spad">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section-title">
+                    <span>meet the support squad</span>
+                    <h2>Our sponsors</h2>
+                </div>
+            </div>
+        </div>
+        <div class="ts_slider owl-carousel">
+            {% for sponsor in sponsors_list %}
+                <div class="ts_item">
+                    <div class="row">
+                        <div class="col-lg-12 text-center">
+                            <div class="ti_pic">
+                                <img src="{{ sponsor.img.url }}" alt="">
+                            </div>
+                            <div class="ti_text">
+                                <h5>{{ sponsor.sponsor_name }}</h5>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="gt-text">
-                        <i class="fa fa-mobile"></i>
-                        <ul>
-                            <li>125-711-811</li>
-                            <li>125-668-886</li>
-                        </ul>
-                    </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<div class="gettouch-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="gt-text">
+                    <i class="fa fa-map-marker"></i>
+                    <p>National Institute of Technology<br> NH 66, Srinivasnagar, Surathkal<br> Mangalore
+                        Karnataka <br>
+                        575025</p>
                 </div>
-                <div class="col-md-4">
-                    <div class="gt-text email">
-                        <i class="fa fa-envelope"></i>
-                        <p>captain.nitkracing@gmail.com</p>
-                    </div>
+            </div>
+            <div class="col-md-4">
+                <div class="gt-text">
+                    <i class="fa fa-mobile"></i>
+                    <ul>
+                        <li>125-711-811</li>
+                        <li>125-668-886</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="gt-text email">
+                    <i class="fa fa-envelope"></i>
+                    <p>captain.nitkracing@gmail.com</p>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Get In Touch Section End -->
+</div>
 
-    <!-- Footer Section Begin -->
-    <section class="footer-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4">
-                    <div class="fs-about">
-                        <div class="fa-logo">
-                            <a href="#"><img src="{%static 'img/logo.png'  %}" alt=""></a>
-                        </div>
 
-                    </div>
+<!-- Get In Touch Section Begin -->
+<div class="gettouch-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="gt-text">
+                    <i class="fa fa-map-marker"></i>
+                    <p>National Institute of Technology<br> NH 66, Srinivasnagar, Surathkal<br> Mangalore
+                        Karnataka <br>
+                        575025</p>
                 </div>
+            </div>
+            <div class="col-md-4">
+                <div class="gt-text">
+                    <i class="fa fa-mobile"></i>
+                    <ul>
+                        <li>125-711-811</li>
+                        <li>125-668-886</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="gt-text email">
+                    <i class="fa fa-envelope"></i>
+                    <p>captain.nitkracing@gmail.com</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Get In Touch Section End -->
+
+<!-- Footer Section Begin -->
+<section class="footer-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="fs-about">
+                    <div class="fa-logo">
+                        <a href="#"><img src="{% static 'img/logo.png' %}" alt=""></a>
+                    </div>
+
+                </div>
+            </div>
 
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <div class="copyright-text">
-                        <p>Developed and maintained by <strong>Addhyan Malhotra</strong> & <strong>Harshal Shende</strong></p>
+                        <p>Developed and maintained by <strong>Addhyan Malhotra</strong> & <strong>Harshal
+                            Shende</strong></p>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-    <!-- Footer Section End -->
-
-    <!-- Search model Begin -->
-    <div class="search-model">
-        <div class="h-100 d-flex align-items-center justify-content-center">
-            <div class="search-close-switch">+</div>
-            <form class="search-model-form">
-                <input type="text" id="search-input" placeholder="Search here.....">
-            </form>
-        </div>
     </div>
-    <!-- Search model end -->
+</section>
+<!-- Footer Section End -->
 
-    <!-- Js Plugins -->
-    <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
-    <script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
-    <script src="{% static 'js/masonry.pkgd.min.js' %}"></script>
-    <script src="{% static 'js/jquery.barfiller.js' %}"></script>
-    <script src="{% static 'js/jquery.slicknav.js' %}"></script>
-    <script src="{% static 'js/owl.carousel.min.js' %}"></script>
-    <script src="{% static 'js/main.js' %}"></script>
+<!-- Search model Begin -->
+<div class="search-model">
+    <div class="h-100 d-flex align-items-center justify-content-center">
+        <div class="search-close-switch">+</div>
+        <form class="search-model-form">
+            <input type="text" id="search-input" placeholder="Search here.....">
+        </form>
+    </div>
+</div>
+<!-- Search model end -->
 
+<!-- Js Plugins -->
+<script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+<script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+<script src="{% static 'js/masonry.pkgd.min.js' %}"></script>
+<script src="{% static 'js/jquery.barfiller.js' %}"></script>
+<script src="{% static 'js/jquery.slicknav.js' %}"></script>
+<script src="{% static 'js/owl.carousel.min.js' %}"></script>
+<script src="{% static 'js/main.js' %}"></script>
 
 
 </body>
