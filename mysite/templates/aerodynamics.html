@@ -43,17 +43,25 @@
             <i class="fa fa-search"></i>
         </div>
         <nav class="canvas-menu mobile-menu">
-            <ul>
-                <li><a href="../index">Home</a></li>
-                <li><a href="../about">About Us</a></li>
-                <li><a href="../team">Our Team</a></li>
-                <li><a href="../contact">Contact</a></li>
-            </ul>
+    <ul>
+                            <li class="./active"><a href="">Home</a></li>
+                            <li><a href="../about">About Us</a></li>
+                            <li><a href="../team">Our Team</a></li>
+                             <li><a href="../gallery">Gallery</a></li>
+                            <li><a href="#">Subsystems</a>
+                            <ul class="dropdown">
+                                    <li><a href="../aerodynamics">Aerodynamics</a></li>
+                                    <li><a href="../vehicledynamics">Vehicle Dynamics</a></li>
+                                    <li><a href="../powertrain">Powertrain</a></li>
+                                    <li><a href="../electronics">Electronics</a></li>
+                                </ul></li>
+                             <li><a href="../contact">Contact</a></li>
+                        </ul>
         </nav>
         <div id="mobile-menu-wrap"></div>
         <div class="canvas-social">
             <a href="https://www.facebook.com/nitkracing"><i class="fa fa-facebook"></i></a>
-            <a href="https://twitter.com/nitkracing"><i class="fa fa-twitter"></i></a>
+            <a href="https://www.linkedin.com/company/nitk-racing"><i class="fa fa-linkedin"></i></a>
             <a href="https://www.youtube.com/channel/UCboCcz11TdW0tMa_5n-eiyA"><i class="fa fa-youtube-play"></i></a>
             <a href="https://www.instagram.com/nitkracing/"><i class="fa fa-instagram"></i></a>
         </div>
@@ -71,12 +79,42 @@
                 <div class="col-lg-6">
                     <nav class="nav-menu">
                         <ul>
-                            <li class="../index"><a href="">Home</a></li>
+                            <li ><a href="../index">Home</a></li>
                             <li><a href="../about">About Us</a></li>
                             <li><a href="../team">Our Team</a></li>
+                              <li><a href="../gallery">Gallery</a></li>
                             <li><a href="../contact">Contact</a></li>
                         </ul>
-                    </nav>
+
+                        <div class="row">
+                <div class="col-md-3 col-sm-3 col-xs-3">
+                    <div class="cs-item">
+                        <a href="../aerodynamics">
+                            <img src="{%static 'img/AD_w.png' %}" alt="" height="150" width="130"> </a>
+                     <ul> <li>  <a href="../aerodynamics">AERODYNAMICS</a></li></ul>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-3 col-xs-3">
+                    <div class="cs-item">
+                        <a href="../vehicledynamics">
+                            <img src="{%static 'img/VD_w.png' %}" alt="" height="150" width="130"></a>
+                        <ul>  <li> <a href="../vehicledynamics">VEHICLE DYNAMICS</a></li></ul>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-3 col-xs-3">
+                    <div class="cs-item"><a href="../powertrain">
+                        <img src="{%static 'img/PT_w.png' %}" alt="" height="150" width="130"></a>
+                        <ul> <li><a href="../powertrain">POWERTRAIN</a></li></ul>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-3 col-xs-3">
+                    <div class="cs-item"><a href="../electronics">
+                       <img src="{%static 'img/EL_w.png' %}" alt="" height="150" width="130"></a>
+                        <ul> <li> <a href="../electronics">ELECTRONICS</a></li></ul>
+                    </div>
+                </div>
+
+            </div> </nav>
                 </div>
                 <div class="col-lg-3">
                     <div class="top-option">
@@ -85,7 +123,7 @@
                         </div>
                         <div class="to-social">
             <a href="https://www.facebook.com/nitkracing"><i class="fa fa-facebook"></i></a>
-            <a href="https://twitter.com/nitkracing"><i class="fa fa-twitter"></i></a>
+             <a href="https://www.linkedin.com/company/nitk-racing"><i class="fa fa-linkedin"></i></a>
             <a href="https://www.youtube.com/channel/UCboCcz11TdW0tMa_5n-eiyA"><i class="fa fa-youtube-play"></i></a>
             <a href="https://www.instagram.com/nitkracing/"><i class="fa fa-instagram"></i></a>
                         </div>
@@ -117,56 +155,10 @@
                     </div>
                 </div>
             {% endfor %}
-
         </div>
     </section>
     <!-- Hero Section End -->
 
-    <!-- ChoseUs Section Begin -->
-    <section class="choseus-section spad">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="section-title">
-                        <span>A DEEPER LOOK</span>
-                        <h2>OUR SUB-SYSTEMS</h2>
-                    </div>
-                </div>
-            </div>
-                       <div class="row">
-                <div class="col-md-3 col-sm-3 col-xs-3">
-                    <div class="cs-item">
-                        <a href="../aerodynamics">
-                            <img src="{%static 'img/AD_w.png' %}" alt="" height="350" width="300"> </a>
-                        <h4>AERODYNAMICS</h4>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-3 col-xs-3">
-                    <div class="cs-item">
-                        <a href="../vehicledynamics">
-                            <img src="{%static 'img/VD_w.png' %}" alt="" height="350" width="300"></a>
-                        <h4>VEHICLE DYNAMICS</h4>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-3 col-xs-3">
-                    <div class="cs-item"><a href="../powertrain">
-                        <img src="{%static 'img/PT_w.png' %}" alt="" height="350" width="300"></a>
-                        <h4>POWERTRAIN</h4>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-3 col-xs-3">
-                    <div class="cs-item"><a href="../electronics">
-                       <img src="{%static 'img/EL_w.png' %}" alt="" height="350" width="300"></a>
-                        <h4>ELECTRONICS</h4>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-    <!-- ChoseUs Section End -->
-
-    <!-- Classes Section Begin -->
  <section class="blog-section spad">
         <div class="container">
             <div class="row">
@@ -190,10 +182,6 @@
             </div>
         </div>
     </section>
-
-    <!-- Gallery Section End -->
-
-    <!-- Team Section Begin -->
     <section class="team-section spad">
         <div class="container">
             <div class="row">
@@ -208,18 +196,17 @@
             </div>
             <div class="row">
 <div class="ts-slider owl-carousel">
-                    {% for member in full_member_list %}
 
-                        <div class="col-lg-4">
-                        <div class="ts-item set-bg" data-setbg="{{ member.member_img.url }}">
-                            <div class="ts_text">
-                                <h4>{{ member.member_name }}</h4>
-                                <span>{{ member.post }}</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    {% endfor %}
+    {% for member in full_member_list %}
+        <div class="col-lg-4">
+            <div class="ts-item set-bg" data-setbg="{{ member.member_img.url }}">
+                <div class="ts_text">
+                    <h4>{{ member.member_name }}</h4>
+                    <span>{{ member.post }}</span>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
                 </div>
                 </div>
             </div>
@@ -230,17 +217,14 @@
             <div class="row">
                 <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.js"></script>
                 <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
-                {% for document in document_list %}
+                {% for document in document_list %}<div class="col-lg-4">
                     <model-viewer src="{{ document.document.url }}" alt="A 3D model " auto-rotate camera-controls>
-                    </model-viewer>
+                    </model-viewer></div>
                 {% endfor %}
             </div>
         </div>
     </section>
 
-    <!-- Team Section End -->
-
-    <!-- Get In Touch Section Begin -->
     <div class="gettouch-section">
         <div class="container">
             <div class="row">
