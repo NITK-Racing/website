@@ -324,7 +324,7 @@ ol {
 -----------------------*/
 
 .header-section {
-	background-color: #0a0a0a;
+	background-color: #000000;
 	position: absolute;
 	left: 0;
 	top: 0;
@@ -398,7 +398,7 @@ ol {
 }
 
 .nav-menu ul li:hover>a:after {
-	opacity: 0;
+	opacity: 1;
 }
 
 .nav-menu ul li:hover .dropdown {
@@ -587,7 +587,7 @@ ol {
 -----------------------*/
 
 .choseus-section {
-	background: #0a0a0a;
+	background: #000000;
 	padding-bottom: 70px;
 }
 
@@ -615,14 +615,7 @@ ol {
 	transition: all 0.3s;
 }
 
-.cs-item a{
-	color: #ff0000;
-	font-size: 22px;
-	font-weight: 600;
-	margin-top: 24px;
-	margin-bottom: 16px;
-}
-.cs-item:hover a{
+.cs-item h4 {
 	color: #ffffff;
 	font-size: 22px;
 	font-weight: 600;
@@ -1387,7 +1380,6 @@ ol {
 	display: inline-block;
 }
 
-.ts-slider.owl-carousel .owl-nav button,
 .ts_slider.owl-carousel .owl-nav button {
 	height: 46px;
 	width: 46px;
@@ -1404,9 +1396,7 @@ ol {
 	transform: translateY(-23px);
 }
 
-.ts-slider.owl-carousel .owl-nav button.owl-next,
-.ts_slider.owl-carousel .owl-nav button.owl-next
-{
+.ts_slider.owl-carousel .owl-nav button.owl-next {
 	left: auto;
 	right: 30px;
 }
