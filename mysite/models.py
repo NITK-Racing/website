@@ -16,7 +16,7 @@ class Sponsor(models.Model):
     sponsor_name = models.CharField(max_length=250)
     category = models.CharField(max_length=250)
     img = models.ImageField(upload_to='images/sponsors')
-
+    sponsor_link = models.URLField(default=" ")
     def __str__(self):
         return self.sponsor_name
 

@@ -49,7 +49,7 @@
 
         <nav class="canvas-menu mobile-menu">
             <ul>
-                            <li><a href="../index">Home</a></li>
+                            <li class="active"><a href="../index">Home</a></li>
                             <li><a href="../about">About Us</a></li>
                             <li><a href="../team">Our Team</a></li>
 
@@ -85,7 +85,7 @@
                 <div class="col-lg-6">
                     <nav class="nav-menu">
                         <ul>
-                            <li><a href="../index">Home</a></li>
+                            <li class="active"><a href="../index">Home</a></li>
                             <li><a href="../about">About Us</a></li>
                             <li><a href="../team">Our Team</a></li>
                             <li><a href="#">Subsystems</a>
@@ -228,8 +228,8 @@
                 {% for sponsor in sponsors_list %}
                     <div class="col-lg-3 col-md-4">
                     <div class="class-item">
-                        <div class="ci-pic">
-                            <img src="{{ sponsor.img.url }}" alt="">
+                        <div class="ci-pic"><a href="{{ sponsor.sponsor_link }}">
+                            <img src="{{ sponsor.img.url }}" alt=""></a>
                         </div>
                     </div>
                 </div>
@@ -264,8 +264,8 @@
                     <div class="gt-text">
                         <i class="fa fa-mobile"></i>
                         <ul>
-                            <li>125-711-811</li>
-                            <li>125-668-886</li>
+                            <li>7259159980</li>
+                            <li>9113514266</li>
                         </ul>
                     </div>
                 </div>
