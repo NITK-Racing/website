@@ -7,5 +7,7 @@ admin.site.register(Member)
 admin.site.register(Banner)
 admin.site.register(Blog)
 admin.site.register(Document)
+admin.site.register(Pitstop)
+
 
 
