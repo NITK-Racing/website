@@ -20,12 +20,12 @@ def index(request):
 def about(request):
     sponsors_list = Sponsor.objects.all()
     banners_list = Banner.objects.filter(page_to_display=2)
-    blog_list = Blog.objects.all()
+    blog_list = Blog.objects.order_by('updated_on')[:3]
     sig_head_list = Member.objects.filter(sig_head=True)
     image_gallery_full = Image.objects.all()
     full_member_list = Member.objects.all()
     image_gallery_short = Image.objects.filter(display_on_index=True)
-    document_list = Document.objects.filter(subsystem_filter=5)
+    document_list = Pitstop.objects.all()
     context = {'banners_list': banners_list,
                'blog_list': blog_list,
                'sig_head_list': sig_head_list,

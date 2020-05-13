@@ -47,7 +47,6 @@ class Image(models.Model):
 
 class Blog(models.Model):
     title = models.CharField(max_length=200, unique=True)
-    slug = models.SlugField(max_length=200, unique=True)
     blog_filter= models.IntegerField(default=0)
     author = models.ForeignKey(Member, on_delete= models.CASCADE,related_name='blog_posts')
     updated_on = models.DateTimeField(auto_now= True)
@@ -67,3 +66,7 @@ class Document(models.Model):
     uploaded_at = models.DateTimeField(auto_now_add=True)
     def __str__(self):
         return self.description
+
+class Pitstop(models.Model):
+    Google_id = models.CharField(max_length=100,default=" ")
+    edition = models.CharField(max_length=100,default=" ")
