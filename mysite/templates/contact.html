@@ -170,10 +170,10 @@
                     <div class="leave-comment">
                         <form action="#" method="POST">
                             	{% csrf_token %}
-                            <input name="usr" type="text" placeholder="Name*">
-                            <input name="mailid" type="text" placeholder="Email*">
-                            <input name="website" type="text" placeholder="Website">
-                            <textarea name="msg" placeholder="Comment*"></textarea>
+                            <input name="usr" type="text" placeholder="Name*" required>
+                            <input name="mailid" type="text" placeholder="Email*" required>
+                            <input name="website" type="text" placeholder="Website" >
+                            <textarea name="msg" placeholder="Comment*" required></textarea>
                             <button type="submit">Submit</button>
                         </form>
                     </div>

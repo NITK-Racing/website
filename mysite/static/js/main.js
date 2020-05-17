@@ -159,7 +159,10 @@
         Image Popup
     --------------------*/
     $('.image-popup').magnificPopup({
-        type: 'image'
+        type: 'image',
+        gallery:{
+        enabled: true
+  }
     });
 
     /*------------------

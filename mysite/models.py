@@ -70,6 +70,9 @@ class Document(models.Model):
         return self.description
 
 class Pitstop(models.Model):
-    Google_id = models.CharField(max_length=100,default=" ")
+    link = models.URLField(default="#")
+    Google_id = models.CharField(max_length=100,default=" ",blank=True,help_text="ignore maadi!!! <br> leave blank")
     edition = models.CharField(max_length=100,default=" ")
     cover = models.ImageField(upload_to='pits',blank=True)
+
+
