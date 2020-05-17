@@ -104,8 +104,7 @@
                     <div class="to-social">
                         <a href="https://www.facebook.com/nitkracing"><i class="fa fa-facebook"></i></a>
                         <a href="https://www.linkedin.com/company/nitk-racing"><i class="fa fa-linkedin"></i></a>
-                        <a href="https://www.youtube.com/channel/UCboCcz11TdW0tMa_5n-eiyA"><i
-                                class="fa fa-youtube-play"></i></a>
+                        <a href="https://www.youtube.com/channel/UCboCcz11TdW0tMa_5n-eiyA"><i class="fa fa-youtube-play"></i></a>
                         <a href="https://www.instagram.com/nitkracing/"><i class="fa fa-instagram"></i></a>
                     </div>
                 </div>
@@ -173,13 +172,10 @@
         <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.js"></script>
         <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
         {% for document in document_list %}
-            {% if forloop.counter0|divisibleby:2 %}
-            <model-viewer class="gs-item grid-wide" src="{{ document.document.url }}" alt="{{ document.description }} " auto-rotate camera-controls>
-            </model-viewer>
-            {% else %}
-                <model-viewer class="gs-item" src="{{ document.document.url }}" alt="{{ document.description }}" auto-rotate camera-controls>
+
+                <model-viewer class="gs-item  grid-wide" src="{{ document.document.url }}" alt="{{ document.description }}" auto-rotate camera-controls>
                 </model-viewer>
-            {% endif %}
+
         {% endfor %}
 
     </div>
