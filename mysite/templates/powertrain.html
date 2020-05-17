@@ -40,7 +40,7 @@
         <i class="fa fa-close"></i>
     </div>
 
-  <nav class="nav-menu">
+      <nav class="nav-menu">
                         <ul>
                             <li><a href="../index">Home</a></li>
                             <li><a href="../about">About Us</a></li>
@@ -51,10 +51,11 @@
                                     <li><a href="../vehicledynamics">Vehicle Dynamics</a></li>
                                     <li><a href="../powertrain">Powertrain</a></li>
                                     <li><a href="../electronics">Electronics</a></li>
+                                    <li><a href="../media">Media</a></li>
+                                    <li><a href="../marketing">Marketing</a></li>
                                 </ul></li>
-                             <li><a href="../gallery">Gallery</a></li>
+                               <li><a href="../gallery">Gallery</a></li>
                              <li><a href="../contact">Contact</a></li>
-
                         </ul>
 
                     </nav>
@@ -77,7 +78,7 @@
                 </div>
             </div>
             <div class="col-lg-6">
-                 <nav class="nav-menu">
+                  <nav class="nav-menu">
                         <ul>
                             <li><a href="../index">Home</a></li>
                             <li><a href="../about">About Us</a></li>
@@ -88,11 +89,12 @@
                                     <li><a href="../vehicledynamics">Vehicle Dynamics</a></li>
                                     <li><a href="../powertrain">Powertrain</a></li>
                                     <li><a href="../electronics">Electronics</a></li>
+                                    <li><a href="../media">Media</a></li>
+                                    <li><a href="../marketing">Marketing</a></li>
                                 </ul></li>
-                                 <li><a href="../gallery">Gallery</a></li>
+                              <li><a href="../gallery">Gallery</a></li>
                              <li><a href="../contact">Contact</a></li>
                         </ul>
-
                     </nav>
             </div>
             <div class="col-lg-3">
@@ -100,8 +102,7 @@
                     <div class="to-social">
                         <a href="https://www.facebook.com/nitkracing"><i class="fa fa-facebook"></i></a>
                         <a href="https://www.linkedin.com/company/nitk-racing"><i class="fa fa-linkedin"></i></a>
-                        <a href="https://www.youtube.com/channel/UCboCcz11TdW0tMa_5n-eiyA"><i
-                                class="fa fa-youtube-play"></i></a>
+                        <a href="https://www.youtube.com/channel/UCboCcz11TdW0tMa_5n-eiyA"><i class="fa fa-youtube-play"></i></a>
                         <a href="https://www.instagram.com/nitkracing/"><i class="fa fa-instagram"></i></a>
                     </div>
                 </div>
@@ -118,6 +119,7 @@
 <section class="hero-section">
     <div class="hs-slider owl-carousel">
         {% for banner in banners_list %}
+
             <div class="hs-item set-bg" data-setbg="{{ banner.bg_img.url }}">
                 <div class="container">
                     <div class="row">
@@ -131,12 +133,9 @@
                 </div>
             </div>
         {% endfor %}
-
     </div>
 </section>
 <!-- Hero Section End -->
-
-<!-- ChoseUs Section Begin -->
 
 <section class="blog-section spad">
     <div class="container">
@@ -202,7 +201,6 @@
         <div class="row">
             <div class="ts-slider owl-carousel">
                 {% for member in full_member_list %}
-
                     <div class="col-lg-4">
                         <div class="ts-item set-bg" data-setbg="{{ member.member_img.url }}">
                             <div class="ts_text">
@@ -211,7 +209,6 @@
                             </div>
                         </div>
                     </div>
-
                 {% endfor %}
             </div>
         </div>
@@ -224,36 +221,48 @@
         <div class="col-lg-12">
             <div class="section-title">
                 <span>What's under the hood?</span>
-                <h2>OUR SUBSYSTEMS</h2>
+                <h2>OUR SUBSYSTEMS</h2>  <br><br>
             </div>
         </div>
     </div>
-     <nav class="nav-menu">
-       <div class="row">
-                <div class="col-md-3 col-sm-3 col-xs-3">
+    <nav class="nav-menu">
+     <div class="row">
+                <div class="col-md-2 col-sm-2 col-xs-2">
                     <div class="cs-item">
                         <a href="../aerodynamics">
                             <img src="{%static 'img/AD.png' %}" alt="" height="150" width="150"> </a>
                      <ul> <li>  <a href="../aerodynamics">AERODYNAMICS</a></li></ul>
                     </div>
                 </div>
-                <div class="col-md-3 col-sm-3 col-xs-3">
+                <div class="col-md-2 col-sm-2 col-xs-2">
                     <div class="cs-item">
                         <a href="../vehicledynamics">
                             <img src="{%static 'img/VD.png' %}" alt="" height="150" width="150"></a>
                         <ul>  <li> <a href="../vehicledynamics">VEHICLE DYNAMICS</a></li></ul>
                     </div>
                 </div>
-                <div class="col-md-3 col-sm-3 col-xs-3">
+                <div class="col-md-2 col-sm-2 col-xs-2">
                     <div class="cs-item"><a href="../powertrain">
                         <img src="{%static 'img/PT.png' %}" alt="" height="150" width="150"></a>
-                        <ul> <li class="active"><a href="../powertrain">POWERTRAIN</a></li></ul>
+                        <ul> <li><a href="../powertrain">POWERTRAIN</a></li></ul>
                     </div>
                 </div>
-                <div class="col-md-3 col-sm-3 col-xs-3">
+                <div class="col-md-2 col-sm-2 col-xs-2">
                     <div class="cs-item"><a href="../electronics">
                        <img src="{%static 'img/EL.png' %}" alt="" height="150" width="150"></a>
                         <ul> <li> <a href="../electronics">ELECTRONICS</a></li></ul>
+                    </div>
+                </div>
+              <div class="col-md-2 col-sm-2 col-xs-2">
+                    <div class="cs-item"><a href="../media">
+                       <img src="{%static 'img/Media.png' %}" alt="" height="150" width="150"></a>
+                        <ul> <li> <a href="../media">MEDIA</a></li></ul>
+                    </div>
+                </div>
+           <div class="col-md-2 col-sm-2 col-xs-2">
+                    <div class="cs-item"><a href="../marketing">
+                       <img src="{%static 'img/Marketing.png' %}" alt="" height="150" width="150"></a>
+                        <ul> <li> <a href="../marketing">MARKETING</a></li></ul>
                     </div>
                 </div>
 
