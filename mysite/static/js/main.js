@@ -134,6 +134,26 @@
             }
         }
     });
+        $(".ps_slider").owlCarousel({
+        loop: false,
+        margin: 0,
+        items: 3,
+        dots: true,
+        nav: true,
+        navText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
+        autoHeight: false,
+        responsive: {
+            320: {
+                items: 1,
+            },
+            768: {
+                items: 2,
+            },
+            992: {
+                items: 3,
+            }
+        }
+    });
 
     /*------------------
         Image Popup
