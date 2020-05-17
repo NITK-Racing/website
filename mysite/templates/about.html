@@ -148,7 +148,7 @@
         <div class="row">
             <div class="col-lg-6 p-0">
                 <div class="about-video set-bg">
-                    <iframe width="920" height="640" src="https://www.youtube.com/embed/3OvBsaO8wPc?autoplay=1"
+                    <iframe width="920" height="640" src="https://www.youtube.com/embed/3OvBsaO8wPc?autoplay=1&rel=0"
                             frameborder="0"
                             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                             allowfullscreen></iframe>
@@ -215,15 +215,16 @@
                 </div>
             </div>
         </div>
-        <div class="row justify-content-center">
+        <div class="row">
             <div class="ps_slider owl-carousel">
                 {% for document in document_list %}
-                    <div>
-                        <iframe src="https://docs.google.com/viewer?srcid={{ document.Google_id }}&pid=explorer&efh=false&a=v&chrome=false&embedded=true"
-                                width="290px" height="400px"></iframe>
-                        <div class="section-title"><span>{{ document.edition }}</span></div>
+                    <div class="col-lg-12 text-center">
+                            <div class="ti_pic"><a href="{{ document.link }}">
+                                <img src="{{ document.cover.url }}" alt=""></a>
+                            </div>
+                            <div class="ti_text"><h5>{{ document.edition }}</h5></div>
 
-                    </div>
+                        </div>
                 {% endfor %}
             </div>
         </div>

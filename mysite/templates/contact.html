@@ -168,11 +168,12 @@
 
                 <div class="col-lg-6">
                     <div class="leave-comment">
-                        <form action="#">
-                            <input type="text" placeholder="Name">
-                            <input type="text" placeholder="Email">
-                            <input type="text" placeholder="Website">
-                            <textarea placeholder="Comment"></textarea>
+                        <form action="#" method="POST">
+                            	{% csrf_token %}
+                            <input name="usr" type="text" placeholder="Name*" required>
+                            <input name="mailid" type="text" placeholder="Email*" required>
+                            <input name="website" type="text" placeholder="Website" >
+                            <textarea name="msg" placeholder="Comment*" required></textarea>
                             <button type="submit">Submit</button>
                         </form>
                     </div>

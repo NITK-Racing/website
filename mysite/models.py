@@ -5,7 +5,7 @@ from django.db import models
 class Banner(models.Model):
     page_to_display = models.IntegerField(default=1)
     bg_img = models.ImageField(upload_to='images/')
-    small_text = models.CharField(max_length=50)
+    small_text = models.CharField(max_length=50, blank=True)
     large_text = models.CharField(max_length=150)
 
     def __str__(self):
@@ -40,7 +40,7 @@ class Member(models.Model):
 
 class Image(models.Model):
     img = models.ImageField(upload_to='images/')
-    alt_text = models.CharField(max_length=50)
+    alt_text = models.CharField(max_length=50, blank=True)
     display_on_index = models.BooleanField()
 
     def __str__(self):
@@ -70,6 +70,9 @@ class Document(models.Model):
         return self.description
 
 class Pitstop(models.Model):
-    Google_id = models.CharField(max_length=100,default=" ")
+    link = models.URLField(default="#")
+    Google_id = models.CharField(max_length=100,default=" ",blank=True,help_text="ignore maadi!!! <br> leave blank")
     edition = models.CharField(max_length=100,default=" ")
     cover = models.ImageField(upload_to='pits',blank=True)
+
+

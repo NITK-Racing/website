@@ -773,7 +773,7 @@ ol {
 .ps-item {
 	text-align: center;
 	padding: 40px 30px 52px;
-	border: 1px solid #464646;
+	border: 1px solid #ff0000;
 	-webkit-transform: skewY(-4deg);
 	-ms-transform: skewY(-4deg);
 	transform: skewY(-4deg);
@@ -1379,7 +1379,11 @@ ol {
 .ts_slider.owl-carousel .owl-item img {
 	display: inline-block;
 }
+.ps_slider.owl-carousel .owl-item{
+	        text-align:center;
+}
 
+.ts-slider.owl-carousel .owl-nav button,
 .ps_slider.owl-carousel .owl-nav button,
 .ts_slider.owl-carousel .owl-nav button {
 	height: 46px;
@@ -1391,12 +1395,13 @@ ol {
 	font-size: 24px;
 	position: absolute;
 	left: 30px;
-	top: 50%;
+	top: 98%;
 	-webkit-transform: translateY(-23px);
 	-ms-transform: translateY(-23px);
 	transform: translateY(-23px);
 }
 
+.ts-slider.owl-carousel .owl-nav button.owl-next ,
 .ps_slider.owl-carousel .owl-nav button.owl-next ,
 .ts_slider.owl-carousel .owl-nav button.owl-next {
 	left: auto;
@@ -1406,10 +1411,27 @@ ol {
 .ts_slider .ts_item .ti_pic {
 	margin-bottom: 32px;
 }
-
-.ts_slider .ts_item .ti_pic img {
+.ts_slider .ts_item  {
 	height: 200px;
 	width: 200px;
+
+
+}
+.ti_pic,
+ .ti_pic img {
+	float: none;
+	display: inline-block;
+	 height: 200px;
+		width: 142px;
+    object-fit: contain;
+
+
+
+}
+ .ti_pic img:hover {
+
+	border-style: solid;
+	border-color: #ff0000;
 
 }
 
@@ -1424,6 +1446,9 @@ ol {
 	font-weight: 600;
 	text-transform: uppercase;
 	margin-bottom: 8px;
+}
+.ti_text h5{
+	color: #ff0000 !important;
 }
 
 .ts_slider .ts_item .ti_text .tt-rating i {
@@ -2846,11 +2871,12 @@ ol {
 	.class-item .ci-text:after {
 		width: 750px;
 	}
-
+    .ts-slider.owl-carousel .owl-nav button ,
 	.ps_slider.owl-carousel .owl-nav button ,
 	.ts_slider.owl-carousel .owl-nav button {
 		left: 0;
 	}
+    .ts-slider.owl-carousel .owl-nav button.owl-next,
 	.ps_slider.owl-carousel .owl-nav button.owl-next,
 	.ts_slider.owl-carousel .owl-nav button.owl-next {
 		right: 0;
@@ -3202,10 +3228,12 @@ ol {
 		font-size: 48px;
 		line-height: normal;
 	}
+    .ts-slider.owl-carousel .owl-nav button,
 	.ps_slider.owl-carousel .owl-nav button,
 	.ts_slider.owl-carousel .owl-nav button {
 		left: 0;
 	}
+    .ts-slider.owl-carousel .owl-nav button.owl-next,
 	.ps_slider.owl-carousel .owl-nav button.owl-next,
 	.ts_slider.owl-carousel .owl-nav button.owl-next {
 		right: 0;
