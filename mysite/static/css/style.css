@@ -1380,6 +1380,7 @@ ol {
 	display: inline-block;
 }
 
+.ts-slider.owl-carousel .owl-nav button,
 .ps_slider.owl-carousel .owl-nav button,
 .ts_slider.owl-carousel .owl-nav button {
 	height: 46px;
@@ -1391,12 +1392,13 @@ ol {
 	font-size: 24px;
 	position: absolute;
 	left: 30px;
-	top: 50%;
+	top: 98%;
 	-webkit-transform: translateY(-23px);
 	-ms-transform: translateY(-23px);
 	transform: translateY(-23px);
 }
 
+.ts-slider.owl-carousel .owl-nav button.owl-next ,
 .ps_slider.owl-carousel .owl-nav button.owl-next ,
 .ts_slider.owl-carousel .owl-nav button.owl-next {
 	left: auto;
@@ -1407,9 +1409,16 @@ ol {
 	margin-bottom: 32px;
 }
 
-.ts_slider .ts_item .ti_pic img {
+.ts_slider .ts_item  {
 	height: 200px;
 	width: 200px;
+
+
+}
+ .ti_pic img {
+	height: 200px;
+	width: 200px;
+    object-fit: contain;
 
 }
 
@@ -2846,11 +2855,12 @@ ol {
 	.class-item .ci-text:after {
 		width: 750px;
 	}
-
+    .ts-slider.owl-carousel .owl-nav button ,
 	.ps_slider.owl-carousel .owl-nav button ,
 	.ts_slider.owl-carousel .owl-nav button {
 		left: 0;
 	}
+    .ts-slider.owl-carousel .owl-nav button.owl-next,
 	.ps_slider.owl-carousel .owl-nav button.owl-next,
 	.ts_slider.owl-carousel .owl-nav button.owl-next {
 		right: 0;
@@ -3202,10 +3212,12 @@ ol {
 		font-size: 48px;
 		line-height: normal;
 	}
+    .ts-slider.owl-carousel .owl-nav button,
 	.ps_slider.owl-carousel .owl-nav button,
 	.ts_slider.owl-carousel .owl-nav button {
 		left: 0;
 	}
+    .ts-slider.owl-carousel .owl-nav button.owl-next,
 	.ps_slider.owl-carousel .owl-nav button.owl-next,
 	.ts_slider.owl-carousel .owl-nav button.owl-next {
 		right: 0;

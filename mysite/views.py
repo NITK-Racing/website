@@ -1,4 +1,6 @@
 from django.shortcuts import render
+from django.core.mail import send_mail
+from django.conf import settings
 from .models import *
 
 
@@ -48,6 +50,18 @@ def contact(request):
                'sponsors_list': sponsors_list,
                'image_gallery_short': image_gallery_short
                }
+    if(request.method=='POST'):
+
+        message ="Name :"+ request.POST['usr']+"\n"+ "Email :" + request.POST['mailid']
+        message += "\n" + "website :" + request.POST['website']
+        message += "\n" + "Content :\n" + request.POST['msg']
+
+        send_mail('Website Contact Form',
+                      message,
+                      settings.EMAIL_HOST_USER,
+                      ['addhyanmalhotra@gmail.com','captain.nitkracing@gmail.com'],
+                      fail_silently=False)
+
     return render(request, 'contact.html', context=context)
 
 
