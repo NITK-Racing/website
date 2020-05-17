@@ -25,10 +25,12 @@ class Sponsor(models.Model):
 class Member(models.Model):
     roll_number = models.CharField(max_length=8, primary_key=True)
     sig = models.IntegerField(default=0)
+    writeup = models.CharField(max_length=144, blank=True)
     member_name = models.CharField(max_length=50)
     post = models.CharField(max_length=300)
     insta = models.URLField(default="")
     linkdin = models.URLField(default="")
+    email = models.EmailField(blank=True)
     member_img = models.ImageField(upload_to='images/members')
     sig_head = models.BooleanField(default=False)
 
@@ -70,3 +72,4 @@ class Document(models.Model):
 class Pitstop(models.Model):
     Google_id = models.CharField(max_length=100,default=" ")
     edition = models.CharField(max_length=100,default=" ")
+    cover = models.ImageField(upload_to='pits',blank=True)
