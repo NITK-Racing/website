@@ -128,29 +128,29 @@ def electronics(request):
                }
     return render(request, 'electronics.html', context=context)
 
-def media(request):
+def marketing(request):
     sponsors_list = Sponsor.objects.all()
-    full_member_list = Member.objects.filter(sig=6)
-    blog_list = Blog.objects.filter(blog_filter=6)
+    full_member_list = Member.objects.filter(sig=5)
+    blog_list = Blog.objects.filter(blog_filter=5)
     banners_list = Banner.objects.filter(page_to_display=9)
     context = {'full_member_list': full_member_list,
                'banners_list': banners_list,
                'blog_list': blog_list,
                'sponsors_list': sponsors_list
                }
-    return render(request, 'media.html', context=context)
+    return render(request, 'marketing.html', context=context)
 
-def marketing(request):
+def media(request):
     sponsors_list = Sponsor.objects.all()
-    full_member_list = Member.objects.filter(sig=5)
-    blog_list = Blog.objects.filter(blog_filter=5)
+    full_member_list = Member.objects.filter(sig=6)
+    blog_list = Blog.objects.filter(blog_filter=6)
     banners_list = Banner.objects.filter(page_to_display=10)
     context = {'full_member_list': full_member_list,
                'banners_list': banners_list,
                'blog_list': blog_list,
                'sponsors_list': sponsors_list
                }
-    return render(request, 'marketing.html', context=context)
+    return render(request, 'media.html', context=context)
 
 def gallery(request):
     sponsors_list = Sponsor.objects.all()

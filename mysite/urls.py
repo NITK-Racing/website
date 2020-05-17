@@ -15,9 +15,9 @@ urlpatterns = [
     path('vehicledynamics/', views.vehicledynamics, name='vehicledynamics'),
     path('electronics/', views.electronics, name='electronics'),
     path('powertrain/', views.powertrain, name='powertrain'),
-    path('gallery', views.gallery, name='gallery'),
     path('media', views.media, name='media'),
-    path('marketing', views.marketing, name='marketing')
+    path('marketing', views.marketing, name='marketing'),
+    path('gallery', views.gallery, name='gallery')
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL,
