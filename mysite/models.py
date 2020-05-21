@@ -3,7 +3,9 @@ from django.db import models
 
 # Create your models here.
 class Banner(models.Model):
-    page_to_display = models.IntegerField(default=1)
+    CHOICES = [(1, 'home'), (2, 'about'), (3, 'team'), (4, 'contact'), (5, 'aero'),
+               (6, 'VD'), (7, 'PWR'), (8, 'ELEC'), (11, 'gallery'), (10, 'media'), (9, 'market')]
+    page_to_display = models.IntegerField(default=1, choices=CHOICES)
     bg_img = models.ImageField(upload_to='images/')
     small_text = models.CharField(max_length=50, blank=True)
     large_text = models.CharField(max_length=150)
@@ -17,14 +19,16 @@ class Sponsor(models.Model):
     category = models.CharField(max_length=250)
     img = models.ImageField(upload_to='images/sponsors')
     sponsor_link = models.URLField(default=" ")
+
     def __str__(self):
         return self.sponsor_name
 
 
 # 12345678
 class Member(models.Model):
+    CHOICES = [(1, 'AERO'), (2, 'VD'), (3, 'PWR'), (4, 'ELEC'), (6, 'MEDIA'), (5, 'MARKETING')]
     roll_number = models.CharField(max_length=8, primary_key=True)
-    sig = models.IntegerField(default=0)
+    sig = models.IntegerField(default=0, choices=CHOICES)
     writeup = models.CharField(max_length=144, blank=True)
     member_name = models.CharField(max_length=50)
     post = models.CharField(max_length=300)
@@ -49,9 +53,11 @@ class Image(models.Model):
 
 class Blog(models.Model):
     title = models.CharField(max_length=200, unique=True)
-    blog_filter= models.IntegerField(default=0)
-    author = models.ForeignKey(Member, on_delete= models.CASCADE,related_name='blog_posts')
-    updated_on = models.DateTimeField(auto_now= True)
+    blog_filter = models.IntegerField(default=0, choices=[(1, 'AERO'), (2, 'VD'), (3, 'PWR'), (4, 'ELEC'), (6, 'MEDIA'),
+                                                          (5, 'MARKETING')]
+                                      )
+    author = models.ForeignKey(Member, on_delete=models.CASCADE, related_name='blog_posts')
+    updated_on = models.DateTimeField(auto_now=True)
     content = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
 
@@ -61,18 +67,35 @@ class Blog(models.Model):
     def __str__(self):
         return self.title
 
+
 class Document(models.Model):
+    CHOICES = [(1, 'AERO'), (2, 'VD'), (3, 'PWR'), (4, 'ELEC')]
     description = models.CharField(max_length=255, blank=True)
     document = models.FileField(upload_to='3dModels/')
-    subsystem_filter = models.IntegerField(default=0)
+    subsystem_filter = models.IntegerField(default=0, choices=CHOICES)
     uploaded_at = models.DateTimeField(auto_now_add=True)
+
     def __str__(self):
         return self.description
 
+
 class Pitstop(models.Model):
     link = models.URLField(default="#")
-    Google_id = models.CharField(max_length=100,default=" ",blank=True,help_text="ignore maadi!!! <br> leave blank")
-    edition = models.CharField(max_length=100,default=" ")
-    cover = models.ImageField(upload_to='pits',blank=True)
+    # Google_id = models.CharField(max_length=100,default=" ",blank=True,help_text="ignore maadi!!! <br> leave blank")
+    edition = models.CharField(max_length=100, default=" ")
+    created_on = models.DateTimeField()
+    cover = models.ImageField(upload_to='pits', blank=True)
+
+    class Meta:
+        ordering = ['-created_on']
 
 
+class Subscribers(models.Model):
+    email = models.EmailField()
+
+    def __str__(self):
+        return self.email
+
+
+class textNextToVideo(models.Model):
+    text = models.TextField(help_text="this text will appear next to video")

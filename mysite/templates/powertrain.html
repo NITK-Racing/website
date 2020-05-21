@@ -177,15 +177,9 @@
         <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.js"></script>
         <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
         {% for document in document_list %}
-            {% if forloop.counter0|divisibleby:2 %}
-                <model-viewer class="gs-item grid-wide" src="{{ document.document.url }}"
-                              alt="{{ document.description }} " auto-rotate camera-controls>
+                <model-viewer class="gs-item  grid-wide" src="{{ document.document.url }}"  alt="{{ document.description }} " auto-rotate camera-controls>
                 </model-viewer>
-            {% else %}
-                <model-viewer class="gs-item" src="{{ document.document.url }}" alt="{{ document.description }}"
-                              auto-rotate camera-controls>
-                </model-viewer>
-            {% endif %}
+
         {% endfor %}
 
     </div>
