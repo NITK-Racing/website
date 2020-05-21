@@ -68,7 +68,7 @@ def contact(request):
 
 def team(request):
     sponsors_list = Sponsor.objects.all()
-    full_member_list = Member.objects.all().order_by('-roll_number')
+    full_member_list = Member.objects.all().order_by('roll_number')
     banners_list = Banner.objects.filter(page_to_display=4)
     sig_head_list = Member.objects.filter(sig_head=True)
     image_gallery_full = Image.objects.all()
