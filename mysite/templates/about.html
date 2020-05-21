@@ -214,7 +214,11 @@
                              <span>Our Newsletter</span>
                     <h2>PITSTOP Editions</h2>
                         </div>
-                        <a href="#" class="primary-btn btn-normal appoinment-btn">Subscribe</a>
+                        <form action="#" method="POST">
+                            	{% csrf_token %}
+                            <input type="email" name="mailid" required>
+                            <button class="primary-btn" type="submit">Subscribe</button>
+                    </form>
                     </div>
                 </div>
             </div>

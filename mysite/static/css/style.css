@@ -545,6 +545,10 @@ ol {
 	-ms-flex-line-pack: center;
 	align-content: center;
 	padding-top: 355px;
+	background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .hs-slider .hs-item .hi-text span {
