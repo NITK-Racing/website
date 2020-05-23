@@ -29,6 +29,17 @@ def about(request):
     full_member_list = Member.objects.all()
     image_gallery_short = Image.objects.filter(display_on_index=True)
     document_list = Pitstop.objects.all()
+    if(request.method=='POST'):
+        subs = Subscribers(email=request.POST['mailid'])
+        message ="Greetings from NITKRacing,\n enclosed below is a link to the latest editon of pitstop\n"
+        message+=Pitstop.objects.all()[0].link
+        message+="\nRegards NITKRacing"
+        subs.save()
+        send_mail('Thank you for subscribing!',
+                      message,
+                      settings.EMAIL_HOST_USER,
+                      [subs.email],
+                      fail_silently=False)
     context = {'banners_list': banners_list,
                'blog_list': blog_list,
                'sig_head_list': sig_head_list,
@@ -52,7 +63,6 @@ def contact(request):
                'image_gallery_short': image_gallery_short
                }
     if(request.method=='POST'):
-
         message ="Name :"+ request.POST['usr']+"\n"+ "Email :" + request.POST['mailid']
         message += "\n" + "website :" + request.POST['website']
         message += "\n" + "Content :\n" + request.POST['msg']

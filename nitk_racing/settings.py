@@ -9,11 +9,16 @@ https://docs.djangoproject.com/en/3.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.0/ref/settings/
 """
-
+from .bobz import *
 EMAIL_USE_TLS= True
 EMAIL_HOST= 'smtp.gmail.com'
-EMAIL_HOST_USER = 'nitkracing.webteam@gmail.com'
-EMAIL_HOST_PASSWORD = '224yuA39'
+if fish and bait:
+    EMAIL_HOST_USER = fish
+    EMAIL_HOST_PASSWORD = bait
+else:
+    EMAIL_HOST_USER = 'nitkracing.webteam@gmail.com'
+    EMAIL_HOST_PASSWORD = '224yuA39'
+
 EMAIL_PORT = 587
 
 

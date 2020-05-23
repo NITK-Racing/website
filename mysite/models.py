@@ -11,7 +11,7 @@ class Banner(models.Model):
     large_text = models.CharField(max_length=150)
 
     def __str__(self):
-        return self.small_text
+        return self.id
 
 
 class Sponsor(models.Model):
@@ -97,5 +97,6 @@ class Subscribers(models.Model):
         return self.email
 
 
-class textNextToVideo(models.Model):
-    text = models.TextField(help_text="this text will appear next to video")
+class about_us_content(models.Model):
+    youtube_link= models.URLField()
+    text_next_to_video=models.TextField()

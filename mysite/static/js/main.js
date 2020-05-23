@@ -27,6 +27,7 @@
         $(this).css('background-image', 'url(' + bg + ')');
     });
 
+
     //Canvas Menu
     $(".canvas-open").on('click', function () {
         $(".offcanvas-menu-wrapper").addClass("show-offcanvas-menu-wrapper");
@@ -134,7 +135,7 @@
             }
         }
     });
-        $(".ps_slider").owlCarousel({
+    $(".ps_slider").owlCarousel({
         loop: false,
         margin: 0,
         items: 3,
@@ -160,9 +161,9 @@
     --------------------*/
     $('.image-popup').magnificPopup({
         type: 'image',
-        gallery:{
-        enabled: true
-  }
+        gallery: {
+            enabled: true
+        }
     });
 
     /*------------------
