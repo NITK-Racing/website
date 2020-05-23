@@ -475,6 +475,17 @@ ol {
 	color: #ffffff;
 	font-size: 16px;
 	margin-left: 15px;
+	-webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+.top-option .to-social a:hover {
+	color:#ff0000;
+	transform: rotateY(30deg);
+	-webkit-animation: alternate-reverse;
+	-webkit-transform: scale(1.3);
+	transform: scale(1.3);
 }
 
 .offcanvas-menu-wrapper {
@@ -626,6 +637,17 @@ ol {
 	margin-top: 24px;
 	margin-bottom: 16px;
 }
+.cs-item img {
+	-webkit-transform: scale(0.9);
+	transform: scale(0.9);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+.cs-item img:hover {
+	-webkit-transform: scale(1.1);
+	transform: scale(1.1);
+}
+
 
 /*---------------------
   Classes Section
@@ -647,6 +669,14 @@ ol {
 
 .class-item .ci-pic img {
 	min-width: 100%;
+	-webkit-transform: scale(0.9);
+	transform: scale(0.9);
+	-webkit-transition: .6s ease-in-out;
+	transition: .6s ease-in-out;
+}
+.class-item .ci-pic:hover {
+	-webkit-transform: scale(1.1);
+	transform: scale(1.1);
 }
 
 .class-item .ci-text {
@@ -1428,14 +1458,17 @@ ol {
 	 height: 200px;
 		width: 142px;
     object-fit: contain;
+	-webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
 
 
 
 }
  .ti_pic img:hover {
-
-	border-style: solid;
-	border-color: #ff0000;
+-webkit-transform: scale(1.1);
+	transform: scale(1.2);
 
 }
 

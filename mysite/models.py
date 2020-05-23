@@ -97,5 +97,6 @@ class Subscribers(models.Model):
         return self.email
 
 
-class textNextToVideo(models.Model):
-    text = models.TextField(help_text="this text will appear next to video")
+class about_us_content(models.Model):
+    youtube_link= models.URLField()
+    text_next_to_video=models.TextField()
