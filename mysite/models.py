@@ -3,8 +3,8 @@ from django.db import models
 
 # Create your models here.
 class Banner(models.Model):
-    CHOICES = [(1, 'home'), (2, 'about'), (3, 'team'), (4, 'contact'), (5, 'aero'),
-               (6, 'VD'), (7, 'PWR'), (8, 'ELEC'), (11, 'gallery'), (10, 'media'), (9, 'market')]
+    CHOICES = [(1, 'Home'), (2, 'About'), (3, 'Team'), (4, 'Contact'), (5, 'Aero'),
+               (6, 'VD'), (7, 'PWR'), (8, 'ELEC'), (11, 'Gallery'), (10, 'Media'), (9, 'Marketing')]
     page_to_display = models.IntegerField(default=1, choices=CHOICES)
     bg_img = models.ImageField(upload_to='images/')
     small_text = models.CharField(max_length=50, blank=True)
@@ -26,7 +26,7 @@ class Sponsor(models.Model):
 
 # 12345678
 class Member(models.Model):
-    CHOICES = [(1, 'AERO'), (2, 'VD'), (3, 'PWR'), (4, 'ELEC'), (6, 'MEDIA'), (5, 'MARKETING')]
+    CHOICES = [(1, 'AERO'), (2, 'VD'), (3, 'PWR'), (4, 'ELEC'), (6, 'MEDIA'), (5, 'MARKETING'), (6,'Head')]
     roll_number = models.CharField(max_length=8, primary_key=True)
     sig = models.IntegerField(default=0, choices=CHOICES)
     writeup = models.CharField(max_length=144, blank=True)
