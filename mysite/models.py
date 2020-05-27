@@ -26,7 +26,7 @@ class Sponsor(models.Model):
 
 # 12345678
 class Member(models.Model):
-    CHOICES = [(1, 'AERO'), (2, 'VD'), (3, 'PWR'), (4, 'ELEC'), (6, 'MEDIA'), (5, 'MARKETING'), (6,'Head')]
+    CHOICES = [(1, 'AERO'), (2, 'VD'), (3, 'PWR'), (4, 'ELEC'), (6, 'MEDIA'), (5, 'MARKETING')]
     roll_number = models.CharField(max_length=8, primary_key=True)
     sig = models.IntegerField(default=0, choices=CHOICES)
     writeup = models.CharField(max_length=144, blank=True)
