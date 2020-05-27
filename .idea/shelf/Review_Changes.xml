@@ -1,0 +1,9 @@
+<changelist name="Review_Changes" date="1590417390250" recycled="false">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Review_Changes/shelved.patch" />
+  <option name="DESCRIPTION" value="Review Changes" />
+  <binary>
+    <option name="BEFORE_PATH" value="db.sqlite3" />
+    <option name="AFTER_PATH" value="db.sqlite3" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Review_Changes/db.sqlite3" />
+  </binary>
+</changelist>
