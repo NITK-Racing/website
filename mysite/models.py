@@ -28,6 +28,7 @@ class Sponsor(models.Model):
 class Member(models.Model):
     CHOICES = [(1, 'AERO'), (2, 'VD'), (3, 'PWR'), (4, 'ELEC'), (6, 'MEDIA'), (5, 'MARKETING')]
     roll_number = models.CharField(max_length=8, primary_key=True)
+    priority = models.IntegerField(default=5,unique=False,choices=[(0,'cap'),(1,'op'),(2,'tech head'),(3,'subsytem head'),(4,'media/marketing'),(5,'other')])
     sig = models.IntegerField(default=0, choices=CHOICES)
     writeup = models.CharField(max_length=144, blank=True)
     member_name = models.CharField(max_length=50)
@@ -37,7 +38,8 @@ class Member(models.Model):
     email = models.EmailField(blank=True)
     member_img = models.ImageField(upload_to='images/members')
     sig_head = models.BooleanField(default=False)
-
+    class Meta:
+        ordering = ['priority']
     def __str__(self):
         return self.member_name
 

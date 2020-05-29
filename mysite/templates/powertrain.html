@@ -40,7 +40,7 @@
         <i class="fa fa-close"></i>
     </div>
 
-    <nav class="nav-menu">
+    <nav class="canvas-menu mobile-menu">
         <ul>
             <li><a href="../index">Home</a></li>
             <li><a href="../about">About Us</a></li>
@@ -177,8 +177,9 @@
         <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.js"></script>
         <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
         {% for document in document_list %}
-                <model-viewer class="gs-item  grid-wide" src="{{ document.document.url }}"  alt="{{ document.description }} " auto-rotate camera-controls>
-                </model-viewer>
+            <model-viewer class="gs-item  grid-wide" src="{{ document.document.url }}" alt="{{ document.description }} "
+                          auto-rotate camera-controls>
+            </model-viewer>
 
         {% endfor %}
 
