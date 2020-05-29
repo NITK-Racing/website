@@ -138,7 +138,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <div class="section-title">
+                <div class="section-title fade" >
                     <h2>Our Achievements</h2>
                 </div>
             </div>
@@ -146,18 +146,18 @@
 <div class="cd-text">
     <div class="cd-single-item">
 <div class="col-lg-13">
-    <h12 style="color: ghostwhite">NITK Racing is a dynamic team formed in 2006, composed of talented students across the campus here at NITK - one of the eminent institutes in our country, with a passion for race cars and a common goal to emerge as the best racing team.
+    <h12 style="color: ghostwhite" class = "fade">NITK Racing is a dynamic team formed in 2006, composed of talented students across the campus here at NITK - one of the eminent institutes in our country, with a passion for race cars and a common goal to emerge as the best racing team.
     Our team designs and develops race cars which can be rolled out on the racetrack , as we hand pick the best students and provide them the exposure to the world that revolves around the racetrack right from the beginning. It took us 3500 man-hours to build our last race car.
     The significant work done by the team includes, making the design lighter and stronger, ready for the speedway. The team works under the expert guidance of our mentors including our faculty members and the Centre for System Design (CSD-NITK).
       <br><br></h12>
-    <h12 style="color: ghostwhite">
+    <h12 style="color: ghostwhite" class = "fade">
      Our various achievements include participation and qualification in different technical rounds and events as a part of various major racing events/tournaments held in different parts of our country.
                                  <br><br><br></h12></div></div>
 </div>
         <div class="row">
              <div class="col-lg-9"><div class="cd-text">
     <div class="cd-single-item">
-<h12 style="color: red">
+<h12 style="color: red" class = "fade">
         - The team represented India at the FSAE competition held in Michigan in 2011 and in the following year it was placed in the top 10 in 2 of 7 events at FS-Hungary.<br><br>
         - We have built India's lightest FS car and we were declared the best Asian team.<br><br>
         - Won the “Design Innovation” award at SUPRA SAE INDIA 2014 (Chennai) for  carbon fibre air-intake.<br><br>
@@ -175,7 +175,7 @@
 <section class="aboutus-section">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-lg-6 p-0 fade">
+            <div class="col-lg-6 p-0 ">
                 <div class="about-video set-bg">
                     <iframe width="920" height="640" src="https://www.youtube.com/embed/3OvBsaO8wPc?autoplay=1&rel=0"
                             frameborder="0"
@@ -188,7 +188,7 @@
                     <div class="section-title">
                         <span>About Us</span>
                         <h2>What we have done</h2>
-                        <h12 class="fade">Lorem Ipsum is simply dummy text of the printing and typesetting
+                        <p class="fade">Lorem Ipsum is simply dummy text of the printing and typesetting
 
                         <br><br>
 
@@ -199,7 +199,7 @@
                             remaining essentially unchanged. It was popularised in the 1960s with
                             the release of Letraset sheets containing Lorem Ipsum passages, and more
                             recently with desktop publishing software like Aldus PageMaker including versions
-                            of Lorem Ipsum</h12>
+                            of Lorem Ipsum</p>
                     </div>
 
                 </div>
@@ -250,16 +250,12 @@
                         </div>
 
                     </div>
-                    <form class = "fade" action="#" method="POST">
-                        {% csrf_token %}
-                        <input type="email" name="mailid" required>
-                        <button class="primary-btn" type="submit">Subscribe</button>
-                    </form>
+
                 </div>
             <div class="col-lg-4">
                 <div class="leave-comment">
 
-                        <form action="#" method="POST">
+                        <form action="#" method="POST" class="fade">
                             <input type="hidden" name="csrfmiddlewaretoken" value="5UY441d1PVWtmCsyjrTPAoYIniiy1D5xKgyz8jveJUZRiwaQrDrO6dQVjfVF9qJA">
                             	{% csrf_token %}
                            <input name="mailid" type="text" placeholder="Email*" required="">
