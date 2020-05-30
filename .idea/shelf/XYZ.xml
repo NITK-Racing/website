@@ -1,0 +1,9 @@
+<changelist name="XYZ" date="1590828553403" recycled="false">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/XYZ/shelved.patch" />
+  <option name="DESCRIPTION" value="XYZ" />
+  <binary>
+    <option name="BEFORE_PATH" value="db.sqlite3" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+</changelist>
