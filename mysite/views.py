@@ -8,7 +8,9 @@ from .models import *
 def index(request):
     banners_list = Banner.objects.filter(page_to_display=1)
     sponsors_list = Sponsor.objects.all()
-    sig_head_list = Member.objects.filter(sig_head=True).order_by('roll_number')
+
+    sig_head_list = Member.objects.filter(sig_head=True)
+
     image_gallery_full = Image.objects.all()
     image_gallery_short = Image.objects.filter(display_on_index=True)
     context = {'banners_list': banners_list,
@@ -78,7 +80,7 @@ def contact(request):
 
 def team(request):
     sponsors_list = Sponsor.objects.all()
-    full_member_list = Member.objects.all().order_by('roll_number')
+    full_member_list = Member.objects.all()
     banners_list = Banner.objects.filter(page_to_display=4)
     sig_head_list = Member.objects.filter(sig_head=True)
     image_gallery_full = Image.objects.all()
