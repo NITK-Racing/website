@@ -20,7 +20,7 @@ def index(request):
                'image_gallery_full': image_gallery_full,
                'image_gallery_short': image_gallery_short,
                }
-    return render(request, 'index.html', context=context)
+    return render(request, 'ev/index.html', context=context)
 
 
 def about(request):
@@ -52,7 +52,7 @@ def about(request):
                'sponsors_list': sponsors_list,
                'document_list': document_list
                }
-    return render(request, 'about.html', context=context)
+    return render(request, 'ev/about.html', context=context)
 
 
 def contact(request):
@@ -76,7 +76,7 @@ def contact(request):
                       ['addhyanmalhotra@gmail.com','captain.nitkracing@gmail.com'],
                       fail_silently=False)
 
-    return render(request, 'contact.html', context=context)
+    return render(request, 'ev/contact.html', context=context)
 
 
 def team(request):
@@ -94,7 +94,7 @@ def team(request):
         'full_member_list': full_member_list,
         'sponsors_list': sponsors_list
     }
-    return render(request, 'team.html', context=context)
+    return render(request, 'ev/team.html', context=context)
 
 
 def aerodynamics(request):
@@ -109,7 +109,7 @@ def aerodynamics(request):
                'sponsors_list': sponsors_list,
                'document_list': document_list
                }
-    return render(request, 'aerodynamics.html', context=context)
+    return render(request, 'ev/aerodynamics.html', context=context)
 
 
 def vehicledynamics(request):
@@ -124,7 +124,7 @@ def vehicledynamics(request):
                'blog_list': blog_list,
                'document_list': document_list
                }
-    return render(request, 'vehicledynamics.html', context=context)
+    return render(request, 'ev/vehicledynamics.html', context=context)
 
 
 def powertrain(request):
@@ -139,7 +139,7 @@ def powertrain(request):
                'blog_list': blog_list,
                'document_list': document_list
                }
-    return render(request, 'powertrain.html', context=context)
+    return render(request, 'ev/powertrain.html', context=context)
 
 
 def electronics(request):
@@ -154,7 +154,7 @@ def electronics(request):
                'sponsors_list': sponsors_list,
                'document_list': document_list
                }
-    return render(request, 'electronics.html', context=context)
+    return render(request, 'ev/electronics.html', context=context)
 
 
 def marketing(request):
@@ -167,7 +167,7 @@ def marketing(request):
                'blog_list': blog_list,
                'sponsors_list': sponsors_list
                }
-    return render(request, 'marketing.html', context=context)
+    return render(request, 'ev/marketing.html', context=context)
 
 
 def media(request):
@@ -180,7 +180,7 @@ def media(request):
                'blog_list': blog_list,
                'sponsors_list': sponsors_list
                }
-    return render(request, 'media.html', context=context)
+    return render(request, 'ev/media.html', context=context)
 
 
 def gallery(request):
@@ -193,4 +193,4 @@ def gallery(request):
                'banners_list': banners_list,
                'sponsors_list': sponsors_list,
                }
-    return render(request, 'gallery.html', context=context)
+    return render(request, 'ev/gallery.html', context=context)

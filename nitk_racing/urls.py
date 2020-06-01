@@ -21,8 +21,8 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('mysite.urls')),
-    path('nitkracing_ev/', include('nitkracing_ev.urls'))
+    path('cv/', include('mysite.urls')),
+    path('ev/', include('nitkracing_ev.urls'))
 ]
 if settings.DEBUG:
         urlpatterns += static(settings.MEDIA_URL,
