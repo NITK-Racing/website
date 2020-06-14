@@ -31,7 +31,7 @@ The Model-View-Template (MVT) is slightly different from MVC. In fact the main d
 
 - A subscription service has been implemented for the users to get updates about the latest editions of our monthly newsletter 'PITSTOP'.
 
-- Google Maps Api has been used to embed a google map the diplays the location of National Institute Of Technology,Karnataka.
+- Google Maps API has been used to embed a google map the diplays the location of National Institute Of Technology, Karnataka.
 
 - Embedding youtube video links to display the videos uploaded on the NITKRacing youtube channel.
 
