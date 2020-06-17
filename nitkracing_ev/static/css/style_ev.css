@@ -120,7 +120,8 @@ ol {
 
 .section-title span {
     font-size: 16px;
-    color: #33cccc;
+    color: #00e6e6
+;
     text-transform: uppercase;
     font-weight: 700;
 }
@@ -169,7 +170,8 @@ ol {
     font-size: 14px;
     padding: 17px 30px 16px;
     color: #ffffff;
-    background: #33cccc;
+    background: #00e6e6
+;
     line-height: normal;
     letter-spacing: 1px;
     text-transform: uppercase;
@@ -183,8 +185,10 @@ ol {
 }
 
 .primary-btn.btn-normal:hover {
-    background: #33cccc;
-    border-color: #33cccc;
+    background: #00e6e6
+;
+    border-color: #00e6e6
+;
 }
 
 /* Preloder */
@@ -216,7 +220,8 @@ ol {
     0% {
         -webkit-transform: rotate(0deg);
         transform: rotate(0deg);
-        border: 4px solid #33cccc;
+        border: 4px solid #00e6e6
+;
         border-left-color: transparent;
     }
     50% {
@@ -228,7 +233,8 @@ ol {
     100% {
         -webkit-transform: rotate(360deg);
         transform: rotate(360deg);
-        border: 4px solid #33cccc;
+        border: 4px solid #00e6e6
+;
         border-left-color: transparent;
     }
 }
@@ -236,7 +242,8 @@ ol {
 @-webkit-keyframes loader {
     0% {
         -webkit-transform: rotate(0deg);
-        border: 4px solid #33cccc;
+        border: 4px solid #00e6e6
+;
         border-left-color: transparent;
     }
     50% {
@@ -246,7 +253,8 @@ ol {
     }
     100% {
         -webkit-transform: rotate(360deg);
-        border: 4px solid #33cccc;
+        border: 4px solid #00e6e6
+;
         border-left-color: transparent;
     }
 }
@@ -386,7 +394,8 @@ ol {
 }
 
 .nav-menu ul li.active > a {
-    color: #33cccc;
+    color: #00e6e6
+;
 }
 
 .nav-menu ul li.active > a:after {
@@ -394,7 +403,8 @@ ol {
 }
 
 .nav-menu ul li:hover > a {
-    color: #33cccc;
+    color: #00e6e6
+;
 }
 
 .nav-menu ul li:hover > a:after {
@@ -427,7 +437,8 @@ ol {
     top: 35px;
     height: 4px;
     width: 100%;
-    background: #33cccc;
+    background: #00e6e6
+;
     content: "";
     -webkit-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
@@ -482,7 +493,8 @@ ol {
 }
 
 .top-option .to-social a:hover {
-    color: #33cccc;
+    color: #00e6e6
+;
     transform: rotateY(30deg);
     -webkit-animation: alternate-reverse;
     -webkit-transform: scale(1.3);
@@ -589,7 +601,8 @@ ol {
 }
 
 .hs-slider .hs-item .hi-text h1 strong {
-    color: #33cccc;
+    color: #00e6e6
+;
 }
 
 .hs-slider .hs-item .hi-text .primary-btn {
@@ -613,7 +626,8 @@ ol {
 }
 
 .cs-item:hover span {
-    background: #33cccc;
+    background: #00e6e6
+;
     color: #ffffff;
 }
 
@@ -623,7 +637,8 @@ ol {
     background: rgba(255, 255, 255, 0.1);
     border-radius: 50%;
     display: inline-block;
-    color: #33cccc;
+    color: #00e6e6
+;
     line-height: 90px;
     text-align: center;
     -webkit-transition: all 0.3s;
@@ -706,7 +721,8 @@ ol {
 }
 
 .class-item .ci-text span {
-    color: #33cccc;
+    color: #00e6e6
+;
     font-size: 12px;
     text-transform: uppercase;
     font-weight: 700;
@@ -781,14 +797,16 @@ ol {
 
 .bs-text .primary-btn {
     background: transparent;
-    border: 2px solid #33cccc;
+    border: 2px solid #00e6e6
+;
 }
 
 .bs-text .play-btn {
     display: inline-block;
     height: 70px;
     width: 70px;
-    background: #33cccc;
+    background: #00e6e6
+;
     border-radius: 50%;
     line-height: 70px;
     text-align: center;
@@ -811,7 +829,8 @@ ol {
 .ps-item {
     text-align: center;
     padding: 40px 30px 52px;
-    border: 1px solid #33cccc;
+    border: 1px solid #00e6e6
+;
     -webkit-transform: skewY(-4deg);
     -ms-transform: skewY(-4deg);
     transform: skewY(-4deg);
@@ -841,7 +860,8 @@ ol {
 }
 
 .ps-item:hover .primary-btn.pricing-btn {
-    background: #33cccc;
+    background: #00e6e6
+;
 }
 
 .ps-item:hover .thumb-icon {
@@ -868,7 +888,8 @@ ol {
 
 .ps-item .pi-price h2 {
     font-size: 60px;
-    color: #33cccc;
+    color: #00e6e6
+;
     font-weight: 600;
 }
 
@@ -903,7 +924,8 @@ ol {
 
 .ps-item .thumb-icon {
     font-size: 48px;
-    color: #33cccc;
+    color: #00e6e6
+;
     position: absolute;
     left: 50px;
     bottom: 120px;
@@ -960,7 +982,8 @@ ol {
 
 .gallery .gs-item .thumb-icon {
     font-size: 48px;
-    color: #33cccc;
+    color: #00e6e6
+;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1027,7 +1050,8 @@ ol {
 
 .primary-btn.appoinment-btn {
     background: transparent;
-    border: 2px solid #33cccc;
+    border: 2px solid #00e6e6
+;
     float: right;
     margin-top: 10px;
 }
@@ -1052,7 +1076,8 @@ ol {
 }
 
 .ts-slider.owl-carousel .owl-dots button.active {
-    background: #33cccc;
+    background: #00e6e6
+;
 }
 
 .ts-slider.owl-carousel .owl-dots button:last-child {
@@ -1126,7 +1151,8 @@ ol {
     display: inline-block;
     height: 65px;
     width: 65px;
-    background: #33cccc;
+    background: #00e6e6
+;
     border-radius: 50%;
     line-height: 65px;
     text-align: center;
@@ -1281,7 +1307,8 @@ ol {
 
 .copyright-text a,
 .copyright-text i {
-    color: #33cccc;
+    color: #00e6e6
+;
 }
 
 /* ----------------------------------- Other Pages Styles ----------------------------------- */
@@ -1324,7 +1351,8 @@ ol {
 
 .breadcrumb-text .bt-option span {
     font-size: 18px;
-    color: #33cccc;
+    color: #00e6e6
+;
     font-weight: 700;
 }
 
@@ -1349,7 +1377,8 @@ ol {
     display: inline-block;
     height: 70px;
     width: 70px;
-    background: #33cccc;
+    background: #00e6e6
+;
     border-radius: 50%;
     line-height: 70px;
     text-align: center;
@@ -1494,7 +1523,8 @@ ol {
 }
 
 .ti_text h5 {
-    color: #33cccc !important;
+    color: #00e6e6
+ !important;
 }
 
 .ts_slider .ts_item .ti_text .tt-rating i {
@@ -1531,7 +1561,8 @@ ol {
 }
 
 .ss-text:hover a {
-    color: #33cccc;
+    color: #00e6e6
+;
 }
 
 .ss-text:hover:after {
@@ -1717,7 +1748,8 @@ ol {
 .class-timetable table thead tr th {
     font-size: 14px;
     color: #ffffff;
-    background: #33cccc;
+    background: #00e6e6
+;
     border-right: 1px solid #363636;
     padding: 15px 0;
     font-weight: 400;
@@ -1730,7 +1762,8 @@ ol {
 
 .class-timetable table tbody tr td.class-time {
     font-size: 12px;
-    color: #33cccc;
+    color: #00e6e6
+;
     background: #000000;
     border: 1px solid #363636;
 }
@@ -1746,7 +1779,8 @@ ol {
 }
 
 .class-timetable table tbody tr td.hover-bg:hover {
-    background: #33cccc;
+    background: #00e6e6
+;
 }
 
 .class-timetable table tbody tr td.blank-td {
@@ -1905,7 +1939,8 @@ ol {
 }
 
 .sidebar-option .so-categories ul li:hover a {
-    color: #33cccc;
+    color: #00e6e6
+;
 }
 
 .sidebar-option .so-categories ul li:hover a span {
@@ -2142,7 +2177,8 @@ ol {
     width: 100%;
     border: none;
     padding: 15px 0;
-    background: #33cccc;
+    background: #00e6e6
+;
 }
 
 /*---------------------
@@ -2642,7 +2678,8 @@ ol {
     width: 100%;
     border: none;
     padding: 14px 0 12px;
-    background: #33cccc;
+    background: #00e6e6
+;
 }
 
 /*---------------------
@@ -2665,7 +2702,8 @@ ol {
 
 .contact-widget .cw-text i {
     font-size: 30px;
-    color: #33cccc;
+    color: #00e6e6
+;
     display: inline-block;
     height: 65px;
     width: 65px;
@@ -2780,7 +2818,8 @@ ol {
     color: #ffffffb3;
     height: 46px;
     width: 100%;
-    background: #33cccc;
+    background: #00e6e6
+;
     border: none;
     padding-left: 20px;
 }
@@ -2836,7 +2875,8 @@ ol {
 }
 
 .text-404 a i {
-    color: #33cccc;
+    color: #00e6e6
+;
     margin-right: 5px;
 }
 
@@ -3083,13 +3123,15 @@ ol {
     .offcanvas-menu-wrapper .slicknav_nav .slicknav_row:hover {
         border-radius: 0;
         background: transparent;
-        color: #33cccc;
+        color: #00e6e6
+;
     }
 
     .offcanvas-menu-wrapper .slicknav_nav a:hover {
         border-radius: 0;
         background: transparent;
-        color: #33cccc;
+        color: #00e6e6
+;
     }
 
     .nav-menu {
@@ -3253,17 +3295,20 @@ ol {
     .offcanvas-menu-wrapper .slicknav_nav .slicknav_row:hover {
         border-radius: 0;
         background: transparent;
-        color: #33cccc;
+        color: #00e6e6
+;
     }
 
     .offcanvas-menu-wrapper .slicknav_nav .slicknav_row:hover a {
-        color: #33cccc;
+        color: #00e6e6
+;
     }
 
     .offcanvas-menu-wrapper .slicknav_nav a:hover {
         border-radius: 0;
         background: transparent;
-        color: #33cccc;
+        color: #00e6e6
+;
     }
 
     .nav-menu {
