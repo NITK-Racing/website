@@ -3,8 +3,9 @@ from django.db import models
 
 # Create your models here.
 class Banner(models.Model):
-    CHOICES = [(1, 'Home'), (2, 'About'), (3, 'Team'), (4, 'Contact'), (5, 'Aero'),
-               (6, 'VD'), (7, 'PWR'), (8, 'ELEC'), (11, 'Gallery'), (10, 'Media'), (9, 'Marketing')]
+    CHOICES = [(1, 'Home'), (2, 'About'), (3, 'Team'), (4, 'Contact'), (5, 'EPOWERTRAIN'), (6, 'VD'), (7, 'BATTERY'),
+               (8, 'LV'),
+               (9, 'CHASSIS'), (12, 'Gallery'), (11, 'Media'), (10, 'Marketing')]
     page_to_display = models.IntegerField(default=1, choices=CHOICES)
     bg_img = models.ImageField(upload_to='images/ev/')
     small_text = models.CharField(max_length=50, blank=True)
@@ -26,7 +27,8 @@ class Sponsor(models.Model):
 
 # 12345678
 class Member(models.Model):
-    CHOICES = [(1, 'AERO'), (2, 'VD'), (3, 'PWR'), (4, 'ELEC'), (6, 'MEDIA'), (5, 'MARKETING')]
+    CHOICES = [(1, 'EPOWERTRAIN'), (2, 'VD'), (3, 'BATTERY'), (4, 'LV'),
+               (5, 'CHASSIS'), (6, 'MEDIA'), (7, 'MARKETING')]
     roll_number = models.CharField(max_length=8, primary_key=True)
     priority = models.IntegerField(default=5, unique=False,
                                    choices=[(0, 'cap'), (1, 'op'), (2, 'tech head'), (3, 'subsytem head'),
@@ -59,8 +61,8 @@ class Image(models.Model):
 
 class Blog(models.Model):
     title = models.CharField(max_length=200, unique=True)
-    blog_filter = models.IntegerField(default=0, choices=[(1, 'AERO'), (2, 'VD'), (3, 'PWR'), (4, 'ELEC'), (6, 'MEDIA'),
-                                                          (5, 'MARKETING')]
+    blog_filter = models.IntegerField(default=0, choices=[(1, 'EPOWERTRAIN'), (2, 'VD'), (3, 'BATTERY'), (4, 'LV'),
+                                                          (5, 'CHASSIS'), (6, 'MEDIA'), (7, 'MARKETING')]
                                       )
     author = models.ForeignKey(Member, on_delete=models.CASCADE, related_name='blog_posts')
     updated_on = models.DateTimeField(auto_now=True)
@@ -75,7 +77,7 @@ class Blog(models.Model):
 
 
 class Document(models.Model):
-    CHOICES = [(1, 'AERO'), (2, 'VD'), (3, 'PWR'), (4, 'ELEC')]
+    CHOICES = [(1, 'EPOWERTRAIN'), (2, 'VD'), (3, 'BATTERY'), (4, 'LV'), (5, 'CHASSIS')]
     description = models.CharField(max_length=255, blank=True)
     document = models.FileField(upload_to='3dModels/ev/')
     subsystem_filter = models.IntegerField(default=0, choices=CHOICES)
@@ -103,6 +105,6 @@ class Subscribers(models.Model):
         return self.email
 
 
-class about_us_content(models.Model):
+class AboutUsContent(models.Model):
     youtube_link = models.URLField()
     text_next_to_video = models.TextField()

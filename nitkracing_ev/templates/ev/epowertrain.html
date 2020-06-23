@@ -27,7 +27,6 @@
     <link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}" type="text/css">
     <link rel="stylesheet" href="{% static 'css/slicknav.min.css' %}" type="text/css">
     <link rel="stylesheet" href="{% static 'css/style_ev.css' %}" type="text/css">
-
 </head>
 
 <body>
@@ -42,30 +41,30 @@
 
     <nav class="canvas-menu mobile-menu">
         <ul>
-            <li><a href="../index">Home</a></li>
-            <li><a href="../about">About Us</a></li>
-            <li><a href="../team">Our Team</a></li>
-            <li class="active"><a href="#">Subsystems</a>
-                <ul class="dropdown">
-                    <li><a href="../aerodynamics">Aerodynamics</a></li>
-                    <li><a href="../vehicledynamics">Vehicle Dynamics</a></li>
-                    <li><a href="../powertrain">Powertrain</a></li>
-                    <li><a href="../electronics">Electronics</a></li>
-                    <li><a href="../media">Media</a></li>
-                    <li><a href="../marketing">Marketing</a></li>
-                </ul>
-            </li>
-            <li><a href="../gallery">Gallery</a></li>
-            <li><a href="../contact">Contact</a></li>
-        </ul>
-
+                        <li><a href="../index">Home</a></li>
+                        <li><a href="../about">About Us</a></li>
+                        <li><a href="../team">Our Team</a></li>
+                        <li class="active"><a href="#">Subsystems</a>
+                            <ul class="dropdown">
+                                <li><a href="../epowertrain">Electric Powertrain</a></li>
+                                <li><a href="../vehicledynamics">Vehicle Dynamics</a></li>
+                                <li><a href="../battery">Battery</a></li>
+                                <li><a href="../lv">LV Electronics</a></li>
+                                 <li><a href="../chassis">Chassis & Bodywork</a></li>
+                                <li><a href="../media">Media</a></li>
+                                <li><a href="../marketing">Marketing</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="../gallery">Gallery</a></li>
+                        <li><a href="../contact">Contact</a></li>
+                    </ul>
     </nav>
     <div id="mobile-menu-wrap"></div>
     <div class="canvas-social">
-        <a href="https://www.facebook.com/nitkracingelectric/"><i class="fa fa-facebook"></i></a>
+         <a href="https://www.facebook.com/nitkracingelectric/"><i class="fa fa-facebook"></i></a>
         <a href="https://www.linkedin.com/company/nitk-racing"><i class="fa fa-linkedin"></i></a>
         <a href="https://www.youtube.com/channel/UCvDUIx-sh_UOxf9NzrFuRlQ"><i class="fa fa-youtube-play"></i></a>
-        <a href="https://www.instagram.com/nitkracing/"><i class="fa fa-instagram"></i></a>
+          <a href="https://www.instagram.com/nitkracing_electric/"><i class="fa fa-instagram"></i></a>
     </div>
 </div>
 <header class="header-section">
@@ -74,22 +73,23 @@
             <div class="col-lg-3">
                 <div class="logo">
                     <a href="../">
-                       <img src="{% static 'img/NRe_w.png' %}" alt="">
+                         <img src="{% static 'img/NRe_w.png' %}" alt="">
                     </a>
                 </div>
             </div>
             <div class="col-lg-6">
                 <nav class="nav-menu">
-                    <ul>
+                     <ul>
                         <li><a href="../index">Home</a></li>
                         <li><a href="../about">About Us</a></li>
                         <li><a href="../team">Our Team</a></li>
                         <li class="active"><a href="#">Subsystems</a>
                             <ul class="dropdown">
-                                <li><a href="../aerodynamics">Aerodynamics</a></li>
+                                <li><a href="../epowertrain">Electric Powertrain</a></li>
                                 <li><a href="../vehicledynamics">Vehicle Dynamics</a></li>
-                                <li><a href="../powertrain">Powertrain</a></li>
-                                <li><a href="../electronics">Electronics</a></li>
+                                <li><a href="../battery">Battery</a></li>
+                                <li><a href="../lv">LV Electronics</a></li>
+                                 <li><a href="../chassis">Chassis & Bodywork</a></li>
                                 <li><a href="../media">Media</a></li>
                                 <li><a href="../marketing">Marketing</a></li>
                             </ul>
@@ -97,17 +97,15 @@
                         <li><a href="../gallery">Gallery</a></li>
                         <li><a href="../contact">Contact</a></li>
                     </ul>
-
                 </nav>
             </div>
             <div class="col-lg-3">
                 <div class="top-option">
-
                     <div class="to-social">
-                       <a href="https://www.facebook.com/nitkracingelectric/"><i class="fa fa-facebook"></i></a>
+                         <a href="https://www.facebook.com/nitkracingelectric/"><i class="fa fa-facebook"></i></a>
         <a href="https://www.linkedin.com/company/nitk-racing"><i class="fa fa-linkedin"></i></a>
         <a href="https://www.youtube.com/channel/UCvDUIx-sh_UOxf9NzrFuRlQ"><i class="fa fa-youtube-play"></i></a>
-        <a href="https://www.instagram.com/nitkracing/"><i class="fa fa-instagram"></i></a>
+          <a href="https://www.instagram.com/nitkracing_electric/"><i class="fa fa-instagram"></i></a>
                     </div>
                 </div>
             </div>
@@ -123,6 +121,7 @@
 <section class="hero-section">
     <div class="hs-slider owl-carousel">
         {% for banner in banners_list %}
+
             <div class="hs-item set-bg" data-setbg="{{ banner.bg_img.url }}">
                 <div class="container">
                     <div class="row">
@@ -156,14 +155,17 @@
                         </div>
                     {% endfor %}
                 </div>
+
             </div>
         </div>
     </div>
 </section>
+<!-- ChoseUs Section End -->
+
+<!-- Classes Section Begin -->
+
 
 <!-- Gallery Section End -->
-
-<!-- 3d Section -->
 <section class="gallery-section">
     <div class="section-title">
         <span>A glimpse under the hood</span>
@@ -174,8 +176,7 @@
         <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.js"></script>
         <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
         {% for document in document_list %}
-
-            <model-viewer class="gs-item  grid-wide" src="{{ document.document.url }}" alt="{{ document.description }}"
+            <model-viewer class="gs-item  grid-wide" src="{{ document.document.url }}" alt="{{ document.description }} "
                           auto-rotate camera-controls>
             </model-viewer>
 
@@ -183,7 +184,6 @@
 
     </div>
 </section>
-
 <!-- Team Section Begin -->
 <section class="team-section spad">
     <div class="container">
@@ -199,7 +199,6 @@
         <div class="row">
             <div class="ts-slider owl-carousel">
                 {% for member in full_member_list %}
-
                     <div class="col-lg-4">
                         <div class="ts-item set-bg" data-setbg="{{ member.member_img.url }}">
                             <div class="ts_text">
@@ -219,64 +218,87 @@
     <div class="row">
         <div class="col-lg-12">
             <div class="section-title">
-                <span>What's under the hood?</span>
-                <h2>OUR SUBSYSTEMS</h2>  <br><br>
+                <span class="fade">What's under the hood?</span>
+                <h2 class="fade">OUR SUBSYSTEMS</h2>
+                <br><br>
             </div>
         </div>
     </div>
     <nav class="nav-menu">
         <div class="row">
+            <div class="col-md-1 col-sm-1 col-xs-1"></div>
             <div class="col-md-2 col-sm-2 col-xs-2">
-                <div class="cs-item">
-                    <a href="../aerodynamics">
-                        <img src="{% static 'img/AD.png' %}" alt="" height="150" width="150"> </a>
+                <div class=" fade cs-item">
+                    <a href="../epowertrain">
+                        <img src="{% static 'img/ev/Powertrain.png' %}" alt="" height="150" width="150" style="margin-bottom: 40px"> </a>
+
                     <ul>
-                        <li><a href="../aerodynamics">AERODYNAMICS</a></li>
+                        <li><a href="../epowertrain">ELECTRIC POWERTRAIN</a></li>
                     </ul>
                 </div>
             </div>
             <div class="col-md-2 col-sm-2 col-xs-2">
-                <div class="cs-item">
+                <div class="fade cs-item">
                     <a href="../vehicledynamics">
-                        <img src="{% static 'img/VD.png' %}" alt="" height="150" width="150"></a>
+                        <img src="{% static 'img/ev/VD (1).png' %}" alt="" height="150" width="120" style="margin-bottom: 40px"></a>
+
                     <ul>
                         <li><a href="../vehicledynamics">VEHICLE DYNAMICS</a></li>
                     </ul>
                 </div>
             </div>
             <div class="col-md-2 col-sm-2 col-xs-2">
-                <div class="cs-item"><a href="../powertrain">
-                    <img src="{% static 'img/PT.png' %}" alt="" height="150" width="150"></a>
+                <div class="fade cs-item"><a href="../battery">
+                    <img src="{% static 'img/ev/battery.png' %}" alt="" height="150" width="100" style="margin-bottom: 40px"></a>
+                    <br>
                     <ul>
-                        <li><a href="../powertrain">POWERTRAIN</a></li>
+                        <li><a href="../battery">BATTERY & BMS</a></li>
                     </ul>
                 </div>
             </div>
-            <div class="col-md-2 col-sm-2 col-xs-2">
-                <div class="cs-item"><a href="../electronics">
-                    <img src="{% static 'img/EL.png' %}" alt="" height="150" width="150"></a>
+            <div class="fade col-md-2 col-sm-2 col-xs-2">
+                <div class="cs-item"><a href="../lv">
+                    <img src="{% static 'img/ev/LV.png' %}" alt="" height="150" width="150" style="margin-bottom: 40px"></a>
+
                     <ul>
-                        <li><a href="../electronics">ELECTRONICS</a></li>
+                        <li><a href="../lv">LV ELECTRONICS</a></li>
                     </ul>
                 </div>
             </div>
-            <div class="col-md-2 col-sm-2 col-xs-2">
+              <div class="fade col-md-2 col-sm-2 col-xs-2">
+                <div class="cs-item"><a href="../lv">
+                    <img src="{% static 'img/ev/chassis.png' %}" alt="" height="150" width="120" style="margin-bottom: 40px"></a>
+
+                    <ul>
+                        <li><a href="../lv">CHASSIS & BODYWORKS</a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+        <br><br>
+    </nav>
+      <nav class="nav-menu">
+        <div class="row">
+            <div class="fade col-md-4 col-sm-4 col-xs-4"></div>
+            <div class="fade col-md-2 col-sm-2 col-xs-2">
                 <div class="cs-item"><a href="../media">
-                    <img src="{% static 'img/Media.png' %}" alt="" height="150" width="150"></a>
+                    <img src="{% static 'img/ev/Media1.png' %}" alt="" height="150" width="180" style="margin-bottom: 40px"></a>
+
                     <ul>
                         <li><a href="../media">MEDIA</a></li>
                     </ul>
                 </div>
             </div>
             <div class="col-md-2 col-sm-2 col-xs-2">
-                <div class="cs-item"><a href="../marketing">
-                    <img src="{% static 'img/Marketing.png' %}" alt="" height="150" width="150"></a>
+                <div class="fade cs-item"><a href="../marketing">
+                    <img src="{% static 'img/ev/Marketing .png' %}" alt="" height="150" width="150" style="margin-bottom: 40px"></a>
+
                     <ul>
                         <li><a href="../marketing">MARKETING</a></li>
                     </ul>
                 </div>
             </div>
-
         </div>
     </nav>
 </section>
@@ -299,7 +321,6 @@
                             <div class="ti_pic"><a href="{{ sponsor.sponsor_link }}">
                                 <img src="{{ sponsor.img.url }}" alt=""></a>
                             </div>
-
                         </div>
                     </div>
                 </div>
@@ -307,7 +328,6 @@
         </div>
     </div>
 </section>
-
 <section class="footer-section">
     <div class="container-fluid">
         <div class="row">
@@ -315,7 +335,7 @@
                 <div class="fs-about">
                     <div class="logo">
                         <a href="../">
-                              <img src="{% static 'img/NRe_w.png' %}" alt="">
+                          <img src="{% static 'img/NRe_w.png' %}" alt="">
                         </a>
                     </div>
                 </div>
@@ -350,10 +370,7 @@
                     Shende</strong></p>
             </div>
         </div>
-
-
     </div>
-
 </section>
 <!-- Footer Section End -->
 
@@ -369,6 +386,7 @@
 <!-- Search model end -->
 
 <!-- Js Plugins -->
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
 <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
 <script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
 <script src="{% static 'js/masonry.pkgd.min.js' %}"></script>
@@ -376,8 +394,6 @@
 <script src="{% static 'js/jquery.slicknav.js' %}"></script>
 <script src="{% static 'js/owl.carousel.min.js' %}"></script>
 <script src="{% static 'js/main_ev.js' %}"></script>
-<script src="{% static 'js/bootstrap.min.js' %}"></script>
-
 
 
 </body>

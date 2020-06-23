@@ -5,6 +5,9 @@ from django.shortcuts import render
 from .models import *
 
 
+def landing_page(request):
+    return render(request, 'landing_page.html')
+
 def index(request):
     banners_list = Banner.objects.filter(page_to_display=1)
     sponsors_list = Sponsor.objects.all()
