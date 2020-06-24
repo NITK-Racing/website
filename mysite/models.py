@@ -11,7 +11,7 @@ class Banner(models.Model):
     large_text = models.CharField(max_length=150)
 
     def __str__(self):
-        return self.id
+        return self.large_text
 
 
 class Sponsor(models.Model):

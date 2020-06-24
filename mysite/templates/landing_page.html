@@ -14,18 +14,16 @@
         height: 50px;
     }
 
-.bg {
-  /* The image used */
-  background-image: url("bgimage.jpeg");
-
-  /* Full height */
-  height: 100%;
-
-  /* Center and scale the image nicely */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+.i img:hover {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
 }
+.i img{
+-webkit-transform: scale(0.9);
+    transform: scale(0.9);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;}
+
 .button {
 border:none;
   padding: 15px 32px;
@@ -107,43 +105,34 @@ background-color:black;
     <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
 
 </head>
-<body style="background-color:black;">
+<body >
 <div id="preloder">
     <div class="loader"></div>
 </div>
-<div class="offcanvas-menu-overlay"></div>
-<div class="offcanvas-menu-wrapper">
-    <div class="canvas-close">
-        <i class="fa fa-close"></i>
-    </div>
 
-
-    <div id="mobile-menu-wrap"></div>
-    <div class="canvas-social">
-        <a href="https://www.facebook.com/nitkracing"><i class="fa fa-facebook"></i></a>
-        <a href="https://www.linkedin.com/company/nitk-racing"><i class="fa fa-linkedin"></i></a>
-        <a href="https://www.youtube.com/channel/UCboCcz11TdW0tMa_5n-eiyA"><i class="fa fa-youtube-play"></i></a>
-        <a href="https://www.instagram.com/nitkracing/"><i class="fa fa-instagram"></i></a>
-    </div>
-</div>
 
 <!-- Header End -->
 <section class="hero-section">
     <div class="hs-slider owl-carousel">
-        {% for banner in banners_list %}
-            <div class="hs-item set-bg" data-setbg="{{ banner.bg_img.url }}">
+            <div class="hs-item set-bg" data-setbg="{% static 'img/bg.jpeg' %}">
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-6 offset-lg-6">
-                            <div class="hi-text">
-                                <span>{{ banner.small_text }}</span>
-                                <h1>{{ banner.large_text }}</h1>
-                            </div>
-                        </div>
+                          <div class="col-md-4 col-sm-4 col-xs-4"><br>
+                <div class=" fade cs-item">
+                    <a href="../index" ><img src="{% static 'img/logo.png' %}" alt=""></a>
+                </div>
+            </div> <div class="col-md-4 col-sm-4 col-xs-4"></div>
+                        <div class="col-md-4 col-sm-4 col-xs-4">
+                <div class=" fade cs-item">
+                    <a href="../ev/index" >  <img src="{% static 'img/NRe_w.png' %}" alt=""></a>
+                </div>
+            </div>
+
+
                     </div>
                 </div>
             </div>
-        {% endfor %}
+
     </div>
 </section>
 
@@ -156,36 +145,19 @@ background-color:black;
             </div>
         </div>
     </div>
-    <nav class="nav-menu">
-        <div class="row">
-            <div class="col-md-2 col-sm-2 col-xs-2"></div>
-            <div class="col-md-3 col-sm-3 col-xs-3">
-                <div class=" fade cs-item">
-                    <img src="{% static 'img/NRe_w.png' %}" alt="">
 
-                </div>
-            </div>
-            <div class="col-md-2 col-sm-2 col-xs-2"></div>
-            <div class="col-md-3 col-sm-3 col-xs-3"><br><br>
-                <div class="fade cs-item">
-<img src="{% static 'img/logo.png' %}" alt="">
-                </div>
-            </div>
-        </div>
-        <br><br>
-    </nav>
     <nav class="nav-menu">
         <div class="row">
             <div class="col-md-2 col-sm-2 col-xs-2"></div>
             <div class="col-md-3 col-sm-3 col-xs-3">
                 <div class=" fade cs-item">
-                    <a href="../ev/index"><button class="button button1" style="border-radius: 30px">NITKRacing Electric</button></a>
+                    <a href="../index"><button class="button button2" style="border-radius: 30px">NITKRacing Combustion</button></a>
                 </div>
             </div><div class="col-md-2 col-sm-2 col-xs-2"></div>
             <div class="col-md-3 col-sm-3 col-xs-3">
                 <div class="fade cs-item">
 
-                    <a href="../index" ><button class="button button2" style="border-radius: 30px">NITKRacing Combustion</button></a>
+                    <a href="../ev/index" ><button class="button button1" style="border-radius: 30px">NITKRacing  Electric</button></a>
                 </div>
             </div>
         </div>
