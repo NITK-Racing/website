@@ -9,9 +9,8 @@ from .models import *
 def index(request):
     banners_list = Banner.objects.filter(page_to_display=1)
     sponsors_list = Sponsor.objects.all()
-
     sig_head_list = Member.objects.filter(sig_head=True)
-
+    document_list = Document.objects.filter(subsystem_filter=6)
     image_gallery_full = Image.objects.all()
     image_gallery_short = Image.objects.filter(display_on_index=True)
     context = {'banners_list': banners_list,
@@ -19,6 +18,7 @@ def index(request):
                'sig_head_list': sig_head_list,
                'image_gallery_full': image_gallery_full,
                'image_gallery_short': image_gallery_short,
+               'document_list': document_list
                }
     return render(request, 'ev/index.html', context=context)
 

@@ -71,7 +71,7 @@ class Blog(models.Model):
 
 
 class Document(models.Model):
-    CHOICES = [(1, 'AERO'), (2, 'VD'), (3, 'PWR'), (4, 'ELEC')]
+    CHOICES = [(5,'INDEX'),(1, 'AERO'), (2, 'VD'), (3, 'PWR'), (4, 'ELEC')]
     description = models.CharField(max_length=255, blank=True)
     document = models.FileField(upload_to='3dModels/')
     subsystem_filter = models.IntegerField(default=0, choices=CHOICES)

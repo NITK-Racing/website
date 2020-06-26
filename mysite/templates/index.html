@@ -224,7 +224,25 @@
         </div>
     </nav>
 </section>
+<section class="gallery-section">
+    <div class="section-title">
+        <span>A glimpse under the hood</span>
+        <h2>3D MODELS</h2>
+    </div>
+    <div class="gallery">
+        <div class="grid-sizer"></div>
+        <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.js"></script>
+        <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+        {% for document in document_list %}
 
+            <model-viewer class="gs-item grid-wide" src="{{ document.document.url }}" alt="{{ document.description }} "
+                          auto-rotate camera-controls>
+            </model-viewer>
+
+        {% endfor %}
+
+    </div>
+</section>
 
 <!-- Team Section Begin -->
 <section class="team-section spad">
