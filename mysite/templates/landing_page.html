@@ -14,58 +14,60 @@
         height: 50px;
     }
 
-.i img:hover {
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1);
-}
-.i img{
--webkit-transform: scale(0.9);
-    transform: scale(0.9);
-    -webkit-transition: .3s ease-in-out;
-    transition: .3s ease-in-out;}
+    .i img:hover {
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+    }
 
-.button {
-border:none;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-width: 100%;
-    border-radius: 30px;
-  -webkit-transition-duration: 0.4s; /* Safari */
-  transition-duration: 0.4s;
-}
+    .i img {
+        -webkit-transform: scale(0.9);
+        transform: scale(0.9);
+        -webkit-transition: .3s ease-in-out;
+        transition: .3s ease-in-out;
+    }
 
-.button1 {
-  color: #00e6e6; /*blue */
-  background-color:black;
-   border: 1px solid  #00e6e6;
+    .button {
+        border: none;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        width: 100%;
+        border-radius: 30px;
+        -webkit-transition-duration: 0.4s; /* Safari */
+        transition-duration: 0.4s;
+    }
 
- mso-border-shadow: yes;
-}
+    .button1 {
+        color: #00e6e6; /*blue */
+        background-color: black;
+        border: 1px solid #00e6e6;
 
-.button2 {
-color: #ff0000; /* red */
-background-color:black;
-  border: 1px solid #ff0000;
-    mso-border-shadow: yes;
-}
+        mso-border-shadow: yes;
+    }
+
+    .button2 {
+        color: #ff0000; /* red */
+        background-color: black;
+        border: 1px solid #ff0000;
+        mso-border-shadow: yes;
+    }
 
 
-.button1:hover {
-  background-color: black; /*blue */
-  border:2px solid #00e6e6; /*blue */
-  box-shadow: 0 8px 16px 0 rgba(0, 255, 255, 0.84), 0 6px 20px 0 rgba(0, 255, 183, 0.42);
-}
+    .button1:hover {
+        background-color: black; /*blue */
+        border: 2px solid #00e6e6; /*blue */
+        box-shadow: 0 8px 16px 0 rgba(0, 255, 255, 0.84), 0 6px 20px 0 rgba(0, 255, 183, 0.42);
+    }
 
-.button2:hover {
-  background-color: black;
-  border: 2px solid #ff0000; /* red */
-  box-shadow: 0 12px 16px 0 rgba(255, 0, 0, 0.62),0 17px 50px 0 rgba(255,0,0,0.19);
-}
+    .button2:hover {
+        background-color: black;
+        border: 2px solid #ff0000; /* red */
+        box-shadow: 0 12px 16px 0 rgba(255, 0, 0, 0.62), 0 17px 50px 0 rgba(255, 0, 0, 0.19);
+    }
 
 </style>
 <head>
@@ -105,7 +107,7 @@ background-color:black;
     <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
 
 </head>
-<body >
+<body>
 <div id="preloder">
     <div class="loader"></div>
 </div>
@@ -114,24 +116,26 @@ background-color:black;
 <!-- Header End -->
 <section class="hero-section">
     <div class="hs-slider owl-carousel">
-            <div class="hs-item set-bg" data-setbg="{% static 'img/bg.jpeg' %}">
-                <div class="container">
-                    <div class="row">
-                          <div class="col-md-4 col-sm-4 col-xs-4"><br>
-                <div class=" fade cs-item">
-                    <a href="../index" ><img src="{% static 'img/logo.png' %}" alt=""></a>
-                </div>
-            </div> <div class="col-md-4 col-sm-4 col-xs-4"></div>
-                        <div class="col-md-4 col-sm-4 col-xs-4">
-                <div class=" fade cs-item">
-                    <a href="../ev/index" >  <img src="{% static 'img/NRe_w.png' %}" alt=""></a>
-                </div>
-            </div>
+        <div class="hs-item set-bg" data-setbg="{% static 'img/bg2.jpg' %}">
 
-
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 col-sm-4 col-xs-4"><br>
+                        <div class=" fade cs-item">
+                            <a href="../index"><img src="{% static 'img/logo.png' %}" alt=""></a>
+                        </div>
                     </div>
+                    <div class="col-md-4 col-sm-4 col-xs-4"></div>
+                    <div class="col-md-4 col-sm-4 col-xs-4">
+                        <div class=" fade cs-item">
+                            <a href="../ev/index"> <img src="{% static 'img/NRe_w.png' %}" alt=""></a>
+                        </div>
+                    </div>
+
+
                 </div>
             </div>
+        </div>
 
     </div>
 </section>
@@ -151,13 +155,18 @@ background-color:black;
             <div class="col-md-2 "></div>
             <div class="col-md-3 col-sm-1 col-xs-1">
                 <div class=" fade cs-item">
-                    <a href="../index"><button class="button button2" style="border-radius: 30px">NITKRacing Combustion</button></a>
+                    <a href="../index">
+                        <button class="button button2" style="border-radius: 30px">NITKRacing Combustion</button>
+                    </a>
                 </div>
-            </div><div class="col-md-2"></div>
+            </div>
+            <div class="col-md-2"></div>
             <div class="col-md-3 col-sm-1 col-xs-1">
                 <div class="fade cs-item">
 
-                    <a href="../ev/index" ><button class="button button1" style="border-radius: 30px">NITKRacing  Electric</button></a>
+                    <a href="../ev/index">
+                        <button class="button button1" style="border-radius: 30px">NITKRacing Electric</button>
+                    </a>
                 </div>
             </div>
         </div>
@@ -171,13 +180,13 @@ background-color:black;
     <div class="container-fluid">
         <div class="row">
 
-        <div class="col-lg-12 text-center">
-            <div class="copyright-text">
-                <p>Developed and maintained by <strong>Addhyan Malhotra</strong> & <strong>Harshal
-                    Shende</strong></p>
+            <div class="col-lg-12 text-center">
+                <div class="copyright-text">
+                    <p>Developed and maintained by <strong>Addhyan Malhotra</strong> & <strong>Harshal
+                        Shende</strong></p>
+                </div>
             </div>
         </div>
-    </div>
 </section>
 
 <!-- Search model end -->
